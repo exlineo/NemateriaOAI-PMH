@@ -1,4 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
+import { PmhService } from '../providers/services/pmh/pmh.service';
 
 @Controller('ListSets')
 export class ListSetsController {
@@ -6,7 +7,7 @@ export class ListSetsController {
      * Get sets list from server
      * @param resumptionToken resumptionToken choosen
      */
-    @Get('/:identifier')
+    @Get('/:resumptionToken')
     async listFormat(@Param('resumptionToken') resumptionToken): Promise<object>  {
         return new Object();
     }

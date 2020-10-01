@@ -4,9 +4,9 @@ import { GenericI } from '../../../models/interfaces/generic.interface';
 
 @Injectable()
 export class PmhService {
-    constructor(
-        @Inject('GENERIC_MODEL')
-        private genModel:Model<GenericI>) {}
+    // constructor(
+    //     @Inject('GENERIC_MODEL')
+    //     private genModel:Model<GenericI>) {}
     
     getIdentify() {
 

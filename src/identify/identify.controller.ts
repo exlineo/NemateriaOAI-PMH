@@ -1,7 +1,5 @@
 import { Controller, Get, Response, Header } from '@nestjs/common';
 
-const identify_xml:XMLDocument = new XMLDocument();
-
 @Controller('Identify')
 export class IdentifyController {
     /**

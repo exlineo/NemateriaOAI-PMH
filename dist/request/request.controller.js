@@ -12,31 +12,42 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListSetsController = void 0;
+exports.RequestController = void 0;
 const common_1 = require("@nestjs/common");
-let ListSetsController = class ListSetsController {
-    async listFormat(resumptionToken) {
-        return new Object();
+let RequestController = class RequestController {
+    constructor() {
     }
-    async erreur() {
-        return "Merci de vérifier les paramètres transmis dans votre URL";
+    checkVerb(verb) {
+        switch (verb) {
+            case 'Identify':
+                break;
+            case 'GetRecord':
+                break;
+            case 'ListIdentifiers':
+                break;
+            case 'ListMetadataFormats':
+                break;
+            case 'Identify':
+                break;
+            case 'ListRecords':
+                break;
+            case 'ListSets':
+                break;
+            default:
+                return 'nothing';
+        }
     }
 };
 __decorate([
-    common_1.Get('/:resumptionToken'),
-    __param(0, common_1.Param('resumptionToken')),
+    common_1.Get(),
+    __param(0, common_1.Query('verb')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Promise)
-], ListSetsController.prototype, "listFormat", null);
-__decorate([
-    common_1.Get('*'),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Promise)
-], ListSetsController.prototype, "erreur", null);
-ListSetsController = __decorate([
-    common_1.Controller('ListSets')
-], ListSetsController);
-exports.ListSetsController = ListSetsController;
-//# sourceMappingURL=list-sets.controller.js.map
+    __metadata("design:returntype", void 0)
+], RequestController.prototype, "checkVerb", null);
+RequestController = __decorate([
+    common_1.Controller('request'),
+    __metadata("design:paramtypes", [])
+], RequestController);
+exports.RequestController = RequestController;
+//# sourceMappingURL=request.controller.js.map

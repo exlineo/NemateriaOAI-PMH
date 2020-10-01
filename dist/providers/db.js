@@ -7,7 +7,7 @@ const pmh_schemas_1 = require("../models/schemas/pmh.schemas");
 exports.dbProvide = [
     {
         provide: 'DATABASE_CONNECTION',
-        useFactory: () => mongoose.connect(config_1.SERV_ADR),
+        useFactory: () => mongoose.connect(config_1.SERV_ADR, { useNewUrlParser: true }),
     },
 ];
 exports.genericProvider = [

@@ -6,7 +6,7 @@ export const dbProvide = [
   {
     provide: 'DATABASE_CONNECTION',
     useFactory: (): Promise<typeof mongoose> =>
-      mongoose.connect(SERV_ADR),
+      mongoose.connect(SERV_ADR, { useNewUrlParser: true }),
   },
 ];
 
