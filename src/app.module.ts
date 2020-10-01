@@ -7,10 +7,14 @@ import { ListIdentifiersController } from './list-identifiers/list-identifiers.c
 import { ListMetadataFormatsController } from './list-metadata-formats/list-metadata-formats.controller';
 import { ListRecordsController } from './list-records/list-records.controller';
 import { ListSetsController } from './list-sets/list-sets.controller';
+import { Xml } from './providers/xml';
+import { PmhService } from './providers/services/pmh/pmh.service';
+import { dbProvide } from './providers/db';
 
 @Module({
   imports: [],
   controllers: [AppController, GetRecordController, IdentifyController, ListIdentifiersController, ListMetadataFormatsController, ListRecordsController, ListSetsController],
-  providers: [AppService],
+  providers: [AppService, Xml, PmhService, ...dbProvide],
+  exports:[...dbProvide]
 })
 export class AppModule {}
