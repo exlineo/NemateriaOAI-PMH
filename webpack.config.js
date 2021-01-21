@@ -26,6 +26,6 @@ module.exports = {
     ],
     output: {
         path: path.join(__dirname, 'prod'),
-        filename: 'nemateriaroai.js',
+        filename: 'nemateriaoai.js',
     },
 };
