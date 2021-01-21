@@ -1,7 +1,7 @@
 export interface IdI {
     baseurl:string;
     adminemail:string;
-    earliest:string;
+    earliest:number | Date;
     deleterecord:string;
     granularity:string;
     scheme:string;
@@ -9,15 +9,14 @@ export interface IdI {
     delimiter:string;
     sampleid:string;
 }
-
 export class ID implements IdI {
-    baseurl = 'https://vps550589.ovh.net/nemateria-oai';
+    baseurl = 'https://vps550589.ovh.net/nemateriaoai';
     adminemail = 'contact@exlineo.com';
-    earliest = '2020-09-30T22:24:00Z';
+    earliest = new Date();
     deleterecord = 'no';
     granularity = 'YYYY-MM-DDThh:mm:ssZ';
-    scheme = 'oai';
-    repoid = 'exlineo.nemateria.net';
+    scheme = 'oai_dc';
+    repoid = 'oai.nemateria.net';
     delimiter = ':';
-    sampleid = 'oai:exlineo.nemateria.net:000';
+    sampleid = 'oai:nemateria.net:000';
 }

@@ -1,15 +1,16 @@
 import { Controller, Query, Get } from '@nestjs/common';
+import { PmhService } from '../providers/services/pmh/pmh.service';
 
 @Controller('request')
 export class RequestController {
     /**
      * Usual way from OAI PMH servers using verb
      */
-    constructor(){
+    constructor(private pms:PmhService){
 
     }
     @Get()
-    checkVerb(@Query('verb') verb){
+    async checkVerb(@Query('verb') verb){
         switch(verb){
             case 'Identify':
                 

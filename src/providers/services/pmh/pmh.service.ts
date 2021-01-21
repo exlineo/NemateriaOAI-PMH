@@ -4,15 +4,15 @@ import { GenericI } from '../../../models/interfaces/generic.interface';
 
 @Injectable()
 export class PmhService {
-    // constructor(
-    //     @Inject('GENERIC_MODEL')
-    //     private genModel:Model<GenericI>) {}
+    constructor(
+        @Inject('GENERIC_MODEL')
+        private genModel:Model<GenericI>) {}
     
-    getIdentify() {
-
+    async getIdentify(id) {
+        return await this.genModel.findById(id).exec();
     }
-    getListIdentifiers() {
-
+    async getListIdentifiers() {
+        return await this.genModel.find().exec();
     }
     getistMedataFormats() {
 
@@ -24,6 +24,6 @@ export class PmhService {
      * Get list of all sets
      */
     getListSets() {
-
+        
     }
 }

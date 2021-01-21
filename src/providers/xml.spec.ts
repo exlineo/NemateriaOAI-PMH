@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { Xml } from './xml';
+import { SetXml } from './xml';
 
 describe('Xml', () => {
-  let provider: Xml;
+  let provider: SetXml;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [Xml],
+      providers: [SetXml],
     }).compile();
 
-    provider = module.get<Xml>(Xml);
+    provider = module.get<SetXml>(SetXml);
   });
 
   it('should be defined', () => {

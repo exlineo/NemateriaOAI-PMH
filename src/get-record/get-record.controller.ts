@@ -4,11 +4,20 @@ import { Controller, Get, Param } from '@nestjs/common';
 export class GetRecordController {
     
     /**
-     * 
+     * Requête avec un identifiant
      * @param identifier 
      */
-    @Get('/:identifier/:metadataPrefix')
+    @Get('/:identifier')
     async findRecord(@Param('identifier') identifier, @Param('metadataPrefix') metadataPrefix): Promise<object> {
+        return new Object();
+    }
+    /**
+     * Requête avec un identifiant et un prefix
+     * @param identifier Identifiant unique
+     * @param metadataPrefix Préfix sur le type de données à moissonner. Par défaut oai_dc
+     */
+    @Get('/:identifier/:metadataPrefix')
+    async findRecordPrefix(@Param('identifier') identifier, @Param('metadataPrefix') metadataPrefix): Promise<object> {
         return new Object();
     }
     /**

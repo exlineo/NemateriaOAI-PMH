@@ -15,13 +15,13 @@ import { AppService } from './app.service';
 import { PmhService } from './providers/services/pmh/pmh.service';
 import { dbProvide } from './providers/db';
 
-import { Xml } from './providers/xml';
+import { SetXml } from './providers/xml';
 import { SERV_ADR } from './config';
 
 @Module({
   imports: [MongooseModule.forRoot(SERV_ADR)],
   controllers: [AppController, GetRecordController, IdentifyController, ListIdentifiersController, ListMetadataFormatsController, ListRecordsController, ListSetsController, RequestController],
-  providers: [AppService, Xml, PmhService, ...dbProvide],
+  providers: [AppService, SetXml, PmhService, ...dbProvide],
   exports:[...dbProvide]
 })
 export class AppModule {}

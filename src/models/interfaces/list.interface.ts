@@ -5,7 +5,6 @@ export interface ListI {
     set:string;
     resumptionToken:string;
 }
-
 export class List implements ListI{
     from = '';
     until = '';
