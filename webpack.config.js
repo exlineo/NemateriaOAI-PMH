@@ -17,7 +17,7 @@ module.exports = {
             use: 'ts-loader'
         }, ],
     },
-    mode: "development",
+    mode: "production",
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
@@ -26,6 +26,6 @@ module.exports = {
     ],
     output: {
         path: path.join(__dirname, 'prod'),
-        filename: 'nemateriaoai.js',
+        filename: 'oai.js',
     },
 };
