@@ -13,12 +13,12 @@ async function bootstrap() {
       preflightContinue: false,
     }
   });
-  app.use(bodyParser.json({ limit: '50mb' }));
-  app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+  app.use(bodyParser.json({ limit: '20mb' }));
+  app.use(bodyParser.urlencoded({ limit: '20mb', extended: true }));
   // app.enableCors();
   // app.useGlobalFilters(new DispatchError());
 
-  await app.listen(8080);
+  await app.listen(8888);
 
   if (module.hot) {
     module.hot.accept();

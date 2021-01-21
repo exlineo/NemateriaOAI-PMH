@@ -126,7 +126,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /***/ ((module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst core_1 = __webpack_require__(/*! @nestjs/core */ \"@nestjs/core\");\r\nconst bodyParser = __webpack_require__(/*! body-parser */ \"body-parser\");\r\nconst app_module_1 = __webpack_require__(/*! ./app.module */ \"./src/app.module.ts\");\r\nasync function bootstrap() {\r\n    const app = await core_1.NestFactory.create(app_module_1.AppModule, {\r\n        cors: {\r\n            origin: true,\r\n            preflightContinue: false,\r\n        }\r\n    });\r\n    app.use(bodyParser.json({ limit: '50mb' }));\r\n    app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));\r\n    await app.listen(8080);\r\n    if (true) {\r\n        module.hot.accept();\r\n        module.hot.dispose(() => app.close());\r\n    }\r\n}\r\nbootstrap();\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/main.hmr.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst core_1 = __webpack_require__(/*! @nestjs/core */ \"@nestjs/core\");\r\nconst bodyParser = __webpack_require__(/*! body-parser */ \"body-parser\");\r\nconst app_module_1 = __webpack_require__(/*! ./app.module */ \"./src/app.module.ts\");\r\nasync function bootstrap() {\r\n    const app = await core_1.NestFactory.create(app_module_1.AppModule, {\r\n        cors: {\r\n            origin: true,\r\n            preflightContinue: false,\r\n        }\r\n    });\r\n    app.use(bodyParser.json({ limit: '20mb' }));\r\n    app.use(bodyParser.urlencoded({ limit: '20mb', extended: true }));\r\n    await app.listen(8888);\r\n    if (true) {\r\n        module.hot.accept();\r\n        module.hot.dispose(() => app.close());\r\n    }\r\n}\r\nbootstrap();\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/main.hmr.ts?");
 
 /***/ }),
 
@@ -335,7 +335,7 @@ module.exports = require("mongoose");;
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "bb5eacba677065925005"
+/******/ 		__webpack_require__.h = () => "298a6cc90c39cf79b3da"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
