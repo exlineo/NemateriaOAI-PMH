@@ -1562,8 +1562,8 @@
         "affectsGlobalScope": false
       },
       "../src/config.ts": {
-        "version": "d82bc52f645be2716da34ccba5ecd6fa7d61cfaa96cb9fccdae842736b24e322",
-        "signature": "7b41413ba2c24f496a0c362cc31e8fc44f294c17d78546f83f4a34be3b3c2388",
+        "version": "62f56f5ecf21a9aeec1789b1e88eb455304b620c220fcece694f3aac9918b55f",
+        "signature": "a415b51ef781c809d74ed2cfe6bed3b83f015c9a5745d28e89bb1136b02485eb",
         "affectsGlobalScope": false
       },
       "../src/providers/db.ts": {
