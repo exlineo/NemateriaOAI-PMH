@@ -1,7 +1,7 @@
 export interface IdI {
     baseurl: string;
     adminemail: string;
-    earliest: string;
+    earliest: number | Date;
     deleterecord: string;
     granularity: string;
     scheme: string;
@@ -12,7 +12,7 @@ export interface IdI {
 export declare class ID implements IdI {
     baseurl: string;
     adminemail: string;
-    earliest: string;
+    earliest: Date;
     deleterecord: string;
     granularity: string;
     scheme: string;

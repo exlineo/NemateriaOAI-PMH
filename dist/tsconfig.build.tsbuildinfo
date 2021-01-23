@@ -1502,23 +1502,43 @@
         "affectsGlobalScope": false
       },
       "../src/models/schemas/pmh.schemas.ts": {
-        "version": "318edab0f934ef6a15527d4fbb11b6b77cbdbb7482504545a448fd287e9950d4",
-        "signature": "e9830b3bdbcd5f5cdbae51eae94b5f0966c8da464ca8962a9de56b93e4829115",
+        "version": "15dcae668fb8d6806dc19c219e51c20d7adb6ef3042bbd802cdeb20c8a535352",
+        "signature": "c3be9493664ffcbd127f197b9e6426106ab9b9e6bd8e97e3efeca735df8b7b52",
         "affectsGlobalScope": false
       },
       "../src/get-record/get-record.controller.ts": {
-        "version": "cee03e536abe60e5343949e8f7cb11960b537acd7a3d1fd548087f1bf40a47f6",
-        "signature": "76fa379baa1a9cd3524f9ce063bb5599d8be6e8a348aeeae6852a9df68b7a6c5",
+        "version": "f9d9d738ff6fe88829f82914a52fa6f863078de1605ba8dfc0ab41ccf5c2302a",
+        "signature": "baee33ce7e030d4ddb1c3361141d9bdb8ed206c02d8d73ca0a2a8cd9a6c82e36",
+        "affectsGlobalScope": false
+      },
+      "../src/models/interfaces/id-i.interface.ts": {
+        "version": "d82ebb1c8f5446e066bac8b9d8e4a3c586fd8e6203cc2a0b586092b4bb131aa2",
+        "signature": "4216fdfb3b297f977613cba107ba673ec1a1d324d6089acafcde292c11475428",
+        "affectsGlobalScope": false
+      },
+      "../src/providers/xml.ts": {
+        "version": "fb1c9746c6c2f7e962b7585b7f7cd7442c7d85e06ebf9a03e8844e3929d1dc7d",
+        "signature": "1251811ace59bdbb107973d199220e2af3295465e0df7c4259a522865f996c5f",
         "affectsGlobalScope": false
       },
       "../src/identify/identify.controller.ts": {
-        "version": "d675301c3915f1d8c8a2097a230c28a96306a674094ce72b2a6b7d8fc47f0cc6",
-        "signature": "a21a4f017f1bc1cef8589e6bad2e9444946b85038bae886b254bc42b39ef65d5",
+        "version": "c9cfe3d9c0dc3398a6e97e605a394fd0241ba84293e32dc39a48093fb8805619",
+        "signature": "f7a48dc6cd806e8fb6ac290f2929c86c5fa91b1ab98b54180f4010fc6dfcd807",
+        "affectsGlobalScope": false
+      },
+      "../src/models/interfaces/generic.interface.ts": {
+        "version": "59db2321929d93f6b33b8c647c29b5e81166d3a9832d61f0a877a9aa3213a882",
+        "signature": "390924f351892bcd73585aa0d421d1a40c924199766c3367208eefe265babb25",
+        "affectsGlobalScope": false
+      },
+      "../src/providers/services/pmh/pmh.service.ts": {
+        "version": "c2b4718ae45752274f51076e054d97fe1834c02bbf701d2dff1002703e14ccd6",
+        "signature": "67a83d7ccfee0fa57f7a7cbfcfcd0261a415786e42891d10fe72e0fe1126541c",
         "affectsGlobalScope": false
       },
       "../src/list-identifiers/list-identifiers.controller.ts": {
-        "version": "e5e56644d20ab6ebdc423b9ad4dc5d43a74fe8592b2a9387d39e7e27bb60b026",
-        "signature": "458954a7e129ffbba3899f79e17c5b2293f8be57e2486fbdcc02e24dd30355e9",
+        "version": "d5a898e264ba493da7bf5bc58e7b599d06e3a78a89358c2cfd9fffa87c867ee8",
+        "signature": "be0b3410ccccbb3cfc4d3c84ef0ade425c5e5f7c9e80b9f875257d6e43083f08",
         "affectsGlobalScope": false
       },
       "../src/list-metadata-formats/list-metadata-formats.controller.ts": {
@@ -1531,49 +1551,34 @@
         "signature": "2903c06d24db756325f229aea0c646d82e6a42695564a3e9ef4919c0a3000192",
         "affectsGlobalScope": false
       },
-      "../src/models/interfaces/generic.interface.ts": {
-        "version": "e3edb934d9acde0561559d24622cc5e65df8eae56a18422f052a34b13135be56",
-        "signature": "d37364c5a684cf8b9cc066d8fea876569165935afe4eb1596398124404379d01",
-        "affectsGlobalScope": false
-      },
-      "../src/providers/services/pmh/pmh.service.ts": {
-        "version": "d358f377d96c06388a6e02554dfc01d435353adbbe1bec9aef5557d11743e7db",
-        "signature": "29aad9714f46b23012b855a6a8bb99cf89766c930ff986f6013245265ed9f465",
-        "affectsGlobalScope": false
-      },
       "../src/list-sets/list-sets.controller.ts": {
         "version": "647557519b9291a2b952009db9c0643862af470d09fc14778ec5c29d8887f336",
         "signature": "eca67ccc2daf5f1ec917409eb785bf24605233018f8f110f8d32954bfedfd7c3",
         "affectsGlobalScope": false
       },
       "../src/request/request.controller.ts": {
-        "version": "d5514883e79e4ca0d313f896ef23e577eb493a67b11ef0356d7c4982feb7b197",
-        "signature": "f1c6ec1bd82f082d62df579f930aa930ab9cae2338c6dc18abc8f5a59dbe336d",
+        "version": "62ee11608cb2e4e0a568acde9e6d99a914986b64b506aa16107635a0304fa067",
+        "signature": "cf4fa6feb3267924e14e3dd8bd740d6b4c8d58caaaab6d9773263a776de7497a",
         "affectsGlobalScope": false
       },
       "../src/config.ts": {
-        "version": "2578840e0af13b23210af5939db467323b3f17a1f4e150597abb835e3eef3cce",
-        "signature": "dc8af9e95b71de5e86702c3f9225222b594ffa70ca03f2554674e1bef7bbef75",
+        "version": "9a80d9759d99e4badb7d65f306ac88b1921d30e56b30271fa96ede9d3dee37cd",
+        "signature": "175a219e7193d5edf6b2b640c2288e9589879463fac5e91f08f641e33c609f61",
         "affectsGlobalScope": false
       },
       "../src/providers/db.ts": {
-        "version": "4dcffcaa1527ec3b172ee7aa83852f409acf6db89e58a17c6476d80d86c2377c",
+        "version": "30bc54d49ed7b91e8adadd6aa9e85df9ac3238a18338eb316b192f59f47c0d50",
         "signature": "10e3d77be5421889abbb2b7e064ff53b372795d48bf9936e2a908bf0bdea8fae",
         "affectsGlobalScope": false
       },
-      "../src/models/interfaces/id-i.interface.ts": {
-        "version": "1718e1ed474d1c31eddc60c7e9e808afb227a6cc4d822c90aabb34b42869200b",
-        "signature": "7a3dc9aaf7de8ccd4b7c61757ad3daf2b99a4d21fafbc02ee75e70e1db3353bf",
-        "affectsGlobalScope": false
-      },
-      "../src/providers/xml.ts": {
-        "version": "141c81f75e9cbb73b13deeb0749d81c8440a4c5c4bf1cd05d819275faaa0d75d",
-        "signature": "61b353a9280700b674075833a95286c657d15ef585a7567205c455d1b21efadd",
-        "affectsGlobalScope": false
-      },
       "../src/app.module.ts": {
-        "version": "2fcdad3a75d991f83f26de3d8ed8a6f2b1175c9b278cc628d4cca2eedc93fb91",
+        "version": "228fb2ee9ed8b8f1dc9555025d575fac668612ee6a69b23ce43b00289d4c4712",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
+        "affectsGlobalScope": false
+      },
+      "../src/config-example.ts": {
+        "version": "b87ef5c8e8dbb98401f3db69b710c527b93df709e0225452aa46ca27fc44ef57",
+        "signature": "f8912e1a45ea27c4578b9d8204ba8fcbc36d90c8a0599c84ce0da06e62173050",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -1756,14 +1761,44 @@
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d",
         "affectsGlobalScope": false
       },
-      "../src/main.ts": {
-        "version": "3c8967198a459fe0868276c735fb4ecbe75c3ed2bbda02d4dcee787c5c448528",
+      "../node_modules/@types/connect/index.d.ts": {
+        "version": "e6ffa74698f0a1d23e4223242ed7dcdb89d02bbbb063a1930e9f91d0385abe16",
+        "signature": "e6ffa74698f0a1d23e4223242ed7dcdb89d02bbbb063a1930e9f91d0385abe16",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/body-parser/index.d.ts": {
+        "version": "ebddbd167c2fabd0151f50e5df94ca6d845149c47521280d8867afe3429dd078",
+        "signature": "ebddbd167c2fabd0151f50e5df94ca6d845149c47521280d8867afe3429dd078",
+        "affectsGlobalScope": false
+      },
+      "../src/main.hmr.ts": {
+        "version": "18ca20c01698397c23d964fa5462be553874fb1d706ffaeda6328c56e50c4ff7",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
+      "../src/main.ts": {
+        "version": "b1f45ab74db05d0068c668f0e63aa44c2c047c2029a736b2c43c6d93a5278221",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
+        "affectsGlobalScope": false
+      },
+      "../src/db/database.providers.ts": {
+        "version": "c38ac8d10b0a82fd40ec917f0ae9c393fd3e44c59fdd35a682d679d74942f033",
+        "signature": "ac58ebf57b366b0002937a2f2a11de5ddb02b91a86fd0e2944630377db357d75",
+        "affectsGlobalScope": false
+      },
+      "../src/db/database.module.ts": {
+        "version": "b0a88a9b652fd5ce75ab1ddec5be42a587ced2250db18b82172553438eae2074",
+        "signature": "012ca69dacdbff2b4621a9a43ccfba38fabd3511b3a084afb4b12446140989d3",
+        "affectsGlobalScope": false
+      },
       "../src/models/interfaces/list.interface.ts": {
-        "version": "026f34718e68890b20ddd6e1d7900333a0331052cce450ad52e4335cf3e8eeea",
+        "version": "38b12e0ae948cc93fbb786b1fb1a8e1ad6a95bb8e74042b99bbe88ccf5e1a384",
         "signature": "6f9d243e0180ca53a9b0d66ccf802362d4c41fd195b042db9b5a6422337a3310",
+        "affectsGlobalScope": false
+      },
+      "../src/models/interfaces/set.interface.ts": {
+        "version": "5a816da8f6c0f9d8b8a9a61a5a38359eb734e220d00de4a082742f8e66b7de64",
+        "signature": "e2a62e3a5f48629ec8705cfe829e56e7c4b8c6f0125532eee68e1c3b1cb8b1fd",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -1801,16 +1836,6 @@
         "signature": "7df3163944694feeac63067632a8dc2e2dea1350119ec8b43df277af69198369",
         "affectsGlobalScope": false
       },
-      "../node_modules/@types/connect/index.d.ts": {
-        "version": "e6ffa74698f0a1d23e4223242ed7dcdb89d02bbbb063a1930e9f91d0385abe16",
-        "signature": "e6ffa74698f0a1d23e4223242ed7dcdb89d02bbbb063a1930e9f91d0385abe16",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/body-parser/index.d.ts": {
-        "version": "ebddbd167c2fabd0151f50e5df94ca6d845149c47521280d8867afe3429dd078",
-        "signature": "ebddbd167c2fabd0151f50e5df94ca6d845149c47521280d8867afe3429dd078",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@types/color-name/index.d.ts": {
         "version": "f0cb4b3ab88193e3e51e9e2622e4c375955003f1f81239d72c5b7a95415dad3e",
         "signature": "f0cb4b3ab88193e3e51e9e2622e4c375955003f1f81239d72c5b7a95415dad3e",
@@ -1819,6 +1844,31 @@
       "../node_modules/@types/cookiejar/index.d.ts": {
         "version": "16b7fb094ffaa5d270f934e7406e8baee2f8245cfabf6dcc20f693389f005f56",
         "signature": "16b7fb094ffaa5d270f934e7406e8baee2f8245cfabf6dcc20f693389f005f56",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/eslint/helpers.d.ts": {
+        "version": "f345b0888d003fd69cb32bad3a0aa04c615ccafc572019e4bd86a52bd5e49e46",
+        "signature": "f345b0888d003fd69cb32bad3a0aa04c615ccafc572019e4bd86a52bd5e49e46",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/json-schema/index.d.ts": {
+        "version": "b2be568d8ce95fcb26eebd04c035d94825655fdf689bf67d799f5ff8cbbb1024",
+        "signature": "b2be568d8ce95fcb26eebd04c035d94825655fdf689bf67d799f5ff8cbbb1024",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/estree/index.d.ts": {
+        "version": "6a38e250306ceccbab257d11b846d5bd12491157d20901fa01afe4050c93c1b5",
+        "signature": "6a38e250306ceccbab257d11b846d5bd12491157d20901fa01afe4050c93c1b5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/eslint/index.d.ts": {
+        "version": "edb3e2f61a2a6e29a5f9043f73adf65951d52b4c1f22e84050381f7ef0d77318",
+        "signature": "edb3e2f61a2a6e29a5f9043f73adf65951d52b4c1f22e84050381f7ef0d77318",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/eslint-scope/index.d.ts": {
+        "version": "274bda283ef15f4205603ca9967313fc013aa77ae89f2cbeab5fbd51439e96ed",
+        "signature": "274bda283ef15f4205603ca9967313fc013aa77ae89f2cbeab5fbd51439e96ed",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/eslint-visitor-keys/index.d.ts": {
@@ -1920,11 +1970,6 @@
         "version": "d3002f620eab4bf6476c9da5c0efb2041d46f7df8b3032a5631bd206abef2c75",
         "signature": "d3002f620eab4bf6476c9da5c0efb2041d46f7df8b3032a5631bd206abef2c75",
         "affectsGlobalScope": true
-      },
-      "../node_modules/@types/json-schema/index.d.ts": {
-        "version": "b2be568d8ce95fcb26eebd04c035d94825655fdf689bf67d799f5ff8cbbb1024",
-        "signature": "b2be568d8ce95fcb26eebd04c035d94825655fdf689bf67d799f5ff8cbbb1024",
-        "affectsGlobalScope": false
       },
       "../node_modules/@types/json5/index.d.ts": {
         "version": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
@@ -2737,6 +2782,15 @@
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
+      "../node_modules/@types/eslint-scope/index.d.ts": [
+        "../node_modules/@types/eslint/index.d.ts",
+        "../node_modules/@types/estree/index.d.ts"
+      ],
+      "../node_modules/@types/eslint/index.d.ts": [
+        "../node_modules/@types/eslint/helpers.d.ts",
+        "../node_modules/@types/estree/index.d.ts",
+        "../node_modules/@types/json-schema/index.d.ts"
+      ],
       "../node_modules/@types/express-serve-static-core/index.d.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/http.d.ts",
@@ -3314,15 +3368,27 @@
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
+      "../src/db/database.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/db/database.providers.ts"
+      ],
+      "../src/db/database.providers.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/config.ts"
+      ],
       "../src/get-record/get-record.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/identify/identify.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/models/interfaces/id-i.interface.ts",
+        "../src/providers/xml.ts"
       ],
       "../src/list-identifiers/list-identifiers.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts"
+        "../node_modules/@types/node/fs.d.ts",
+        "../src/providers/services/pmh/pmh.service.ts",
+        "../src/providers/xml.ts"
       ],
       "../src/list-metadata-formats/list-metadata-formats.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -3334,11 +3400,19 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/providers/services/pmh/pmh.service.ts"
       ],
+      "../src/main.hmr.ts": [
+        "../node_modules/@nestjs/core/index.d.ts",
+        "../node_modules/@types/body-parser/index.d.ts",
+        "../src/app.module.ts"
+      ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/app.module.ts"
       ],
       "../src/models/interfaces/generic.interface.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/models/interfaces/set.interface.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
       ],
       "../src/models/schemas/pmh.schemas.ts": [
@@ -3359,7 +3433,8 @@
         "../src/models/interfaces/id-i.interface.ts"
       ],
       "../src/request/request.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/providers/services/pmh/pmh.service.ts"
       ]
     },
     "exportedModulesMap": {
@@ -4068,6 +4143,15 @@
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
+      "../node_modules/@types/eslint-scope/index.d.ts": [
+        "../node_modules/@types/eslint/index.d.ts",
+        "../node_modules/@types/estree/index.d.ts"
+      ],
+      "../node_modules/@types/eslint/index.d.ts": [
+        "../node_modules/@types/eslint/helpers.d.ts",
+        "../node_modules/@types/estree/index.d.ts",
+        "../node_modules/@types/json-schema/index.d.ts"
+      ],
       "../node_modules/@types/express-serve-static-core/index.d.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/http.d.ts",
@@ -4623,7 +4707,20 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
+      "../src/db/database.providers.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/identify/identify.controller.ts": [
+        "../src/providers/xml.ts"
+      ],
+      "../src/list-identifiers/list-identifiers.controller.ts": [
+        "../src/providers/services/pmh/pmh.service.ts",
+        "../src/providers/xml.ts"
+      ],
       "../src/models/interfaces/generic.interface.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/models/interfaces/set.interface.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
       ],
       "../src/models/schemas/pmh.schemas.ts": [
@@ -4631,6 +4728,13 @@
       ],
       "../src/providers/db.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/providers/services/pmh/pmh.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/models/interfaces/generic.interface.ts"
+      ],
+      "../src/request/request.controller.ts": [
+        "../src/providers/services/pmh/pmh.service.ts"
       ]
     },
     "semanticDiagnosticsPerFile": []

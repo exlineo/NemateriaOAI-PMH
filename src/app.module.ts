@@ -13,15 +13,15 @@ import { RequestController } from './request/request.controller';
 
 import { AppService } from './app.service';
 import { PmhService } from './providers/services/pmh/pmh.service';
-import { dbProvide } from './providers/db';
+import { dbProvide, genericProvider } from './providers/db';
 
 import { SetXml } from './providers/xml';
 import { SERV_ADR } from './config';
 
 @Module({
-  imports: [MongooseModule.forRoot(SERV_ADR)],
+  imports: [MongooseModule.forRoot(SERV_ADR, [{ name: 'GENERIC', schema: GenericSchema }])],
   controllers: [AppController, GetRecordController, IdentifyController, ListIdentifiersController, ListMetadataFormatsController, ListRecordsController, ListSetsController, RequestController],
-  providers: [AppService, SetXml, PmhService, ...dbProvide],
+  providers: [AppService, SetXml, PmhService, ...dbProvide, ...genericProvider],
   exports:[...dbProvide]
 })
 export class AppModule {}

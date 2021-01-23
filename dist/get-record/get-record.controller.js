@@ -18,17 +18,27 @@ let GetRecordController = class GetRecordController {
     async findRecord(identifier, metadataPrefix) {
         return new Object();
     }
+    async findRecordPrefix(identifier, metadataPrefix) {
+        return new Object();
+    }
     async erreur() {
         return "Merci de vérifier les paramètres transmis dans votre URL";
     }
 };
+__decorate([
+    common_1.Get('/:identifier'),
+    __param(0, common_1.Param('identifier')), __param(1, common_1.Param('metadataPrefix')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], GetRecordController.prototype, "findRecord", null);
 __decorate([
     common_1.Get('/:identifier/:metadataPrefix'),
     __param(0, common_1.Param('identifier')), __param(1, common_1.Param('metadataPrefix')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
-], GetRecordController.prototype, "findRecord", null);
+], GetRecordController.prototype, "findRecordPrefix", null);
 __decorate([
     common_1.Get('*'),
     __metadata("design:type", Function),

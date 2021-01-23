@@ -1,13 +1,10 @@
 import { Model } from 'mongoose';
 import { Injectable, Inject } from '@nestjs/common';
 import { GenericI } from '../../../models/interfaces/generic.interface';
-import { GENERIC_MODEL_PROVIDER } from '../../../constants';
 
 @Injectable()
 export class PmhService {
-    constructor(
-        @Inject(GENERIC_MODEL_PROVIDER)
-        private genModel:Model<GenericI>) {}
+    constructor(@Inject('GENERIC_MODEL') private readonly genModel:Model<GenericI>) {}
     
     async getIdentify(id) {
         return await this.genModel.findById(id).exec();

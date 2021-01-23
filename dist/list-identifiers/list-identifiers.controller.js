@@ -14,9 +14,15 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ListIdentifiersController = void 0;
 const common_1 = require("@nestjs/common");
+const pmh_service_1 = require("../providers/services/pmh/pmh.service");
+const xml_1 = require("../providers/xml");
 let ListIdentifiersController = class ListIdentifiersController {
+    constructor(pmhServ, xml) {
+        this.pmhServ = pmhServ;
+        this.xml = xml;
+    }
     async listIDs(from, until, metadataPrefix, set, resumptionToken) {
-        return new Object();
+        return await new Object();
     }
     async erreur() {
         return "Merci de vérifier les paramètres transmis dans votre URL";
@@ -36,7 +42,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ListIdentifiersController.prototype, "erreur", null);
 ListIdentifiersController = __decorate([
-    common_1.Controller('ListIdentifiers')
+    common_1.Controller('ListIdentifiers'),
+    __metadata("design:paramtypes", [pmh_service_1.PmhService, xml_1.SetXml])
 ], ListIdentifiersController);
 exports.ListIdentifiersController = ListIdentifiersController;
 //# sourceMappingURL=list-identifiers.controller.js.map

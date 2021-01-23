@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
+const pmh_schemas_1 = require("./models/schemas/pmh.schemas");
 const app_controller_1 = require("./app.controller");
 const get_record_controller_1 = require("./get-record/get-record.controller");
 const identify_controller_1 = require("./identify/identify.controller");
@@ -26,9 +27,9 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [mongoose_1.MongooseModule.forRoot(config_1.SERV_ADR)],
+        imports: [mongoose_1.MongooseModule.forRoot(config_1.SERV_ADR, [{ name: 'GENERIC', schema: pmh_schemas_1.GenericSchema }])],
         controllers: [app_controller_1.AppController, get_record_controller_1.GetRecordController, identify_controller_1.IdentifyController, list_identifiers_controller_1.ListIdentifiersController, list_metadata_formats_controller_1.ListMetadataFormatsController, list_records_controller_1.ListRecordsController, list_sets_controller_1.ListSetsController, request_controller_1.RequestController],
-        providers: [app_service_1.AppService, xml_1.Xml, pmh_service_1.PmhService, ...db_1.dbProvide],
+        providers: [app_service_1.AppService, xml_1.SetXml, pmh_service_1.PmhService, ...db_1.dbProvide, ...db_1.genericProvider],
         exports: [...db_1.dbProvide]
     })
 ], AppModule);

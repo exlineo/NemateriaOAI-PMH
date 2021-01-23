@@ -14,10 +14,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RequestController = void 0;
 const common_1 = require("@nestjs/common");
+const pmh_service_1 = require("../providers/services/pmh/pmh.service");
 let RequestController = class RequestController {
-    constructor() {
+    constructor(pms) {
+        this.pms = pms;
     }
-    checkVerb(verb) {
+    async checkVerb(verb) {
         switch (verb) {
             case 'Identify':
                 break;
@@ -43,11 +45,11 @@ __decorate([
     __param(0, common_1.Query('verb')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], RequestController.prototype, "checkVerb", null);
 RequestController = __decorate([
     common_1.Controller('request'),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [pmh_service_1.PmhService])
 ], RequestController);
 exports.RequestController = RequestController;
 //# sourceMappingURL=request.controller.js.map
