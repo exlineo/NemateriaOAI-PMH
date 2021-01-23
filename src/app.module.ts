@@ -22,6 +22,6 @@ import { SERV_ADR } from './config';
   imports: [MongooseModule.forRoot(SERV_ADR, [{ name: 'GENERIC', schema: GenericSchema }])],
   controllers: [AppController, GetRecordController, IdentifyController, ListIdentifiersController, ListMetadataFormatsController, ListRecordsController, ListSetsController, RequestController],
   providers: [AppService, SetXml, PmhService, ...dbProvide, ...genericProvider],
-  exports:[...dbProvide]
+  exports:[...dbProvide, ...genericProvider]
 })
 export class AppModule {}
