@@ -40,13 +40,13 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], GetRecordController.prototype, "findRecordPrefix", null);
 __decorate([
-    common_1.Get('*'),
+    common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], GetRecordController.prototype, "erreur", null);
 GetRecordController = __decorate([
-    common_1.Controller('GetRecord')
+    common_1.Controller('/GetRecord')
 ], GetRecordController);
 exports.GetRecordController = GetRecordController;
 //# sourceMappingURL=get-record.controller.js.map

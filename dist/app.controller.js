@@ -15,13 +15,14 @@ const app_service_1 = require("./app.service");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
+        console.log('Serveur connecté');
     }
     getHello() {
         return this.appService.getHello();
     }
 };
 __decorate([
-    common_1.Get(),
+    common_1.Get('/'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)

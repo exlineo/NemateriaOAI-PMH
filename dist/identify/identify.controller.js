@@ -18,6 +18,7 @@ let IdentifyController = class IdentifyController {
         this.xml = xml;
     }
     async infosOAI() {
+        console.log(this.xml.setIdentifyXml(new id_i_interface_1.ID()));
         return this.xml.setIdentifyXml(new id_i_interface_1.ID());
     }
 };

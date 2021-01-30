@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { GenericSchema, SetSchema, RecordSchema, MetaSchema } from './models/schemas/pmh.schemas';
+import { GenericSchema } from './models/schemas/pmh.schemas';
 
 import { AppController } from './app.controller';
 import { GetRecordController } from './get-record/get-record.controller';
@@ -19,7 +19,7 @@ import { SetXml } from './providers/xml';
 import { SERV_ADR } from './config';
 
 @Module({
-  imports: [MongooseModule.forRoot(SERV_ADR, [{ name: 'GENERIC', schema: GenericSchema }])],
+  // imports: [MongooseModule.forRoot(SERV_ADR)],
   controllers: [AppController, GetRecordController, IdentifyController, ListIdentifiersController, ListMetadataFormatsController, ListRecordsController, ListSetsController, RequestController],
   providers: [AppService, SetXml, PmhService, ...dbProvide, ...genericProvider],
   exports:[...dbProvide, ...genericProvider]

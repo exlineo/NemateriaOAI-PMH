@@ -11,6 +11,7 @@ export class IdentifyController {
     @Get()
     @Header('Content-Type', 'text/xml')
     async infosOAI() {
-        return this.xml.setIdentifyXml(new ID());
+        console.log(this.xml.setIdentifyXml());
+        return this.xml.setIdentifyXml();
     }
 }

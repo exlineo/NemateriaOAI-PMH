@@ -11,7 +11,8 @@ const common_1 = require("@nestjs/common");
 let SetXml = class SetXml {
     setIdentifyXml(ID) {
         let idXml = ID;
-        return `<?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet type='text/xsl' href='oai2.xsl' ?>
+        return `<?xml version='1.0' encoding='UTF-8'?>
+                <?xml-stylesheet type='text/xsl' href='http://vps550598.ovh.net/oai/xml/oai2.xsl' ?>
                     <OAI-PMH xmlns='http://www.openarchives.org/OAI/2.0/' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd'>
                     <responseDate>2020-09-30T19:52:58Z</responseDate>
                     <request verb='Identify'>${idXml.baseurl}</request>
@@ -31,6 +32,9 @@ let SetXml = class SetXml {
                             <sampleIdentifier>${idXml.sampleid}</sampleIdentifier></oai-identifier></description>
                     </Identify>
                     </OAI-PMH>`;
+    }
+    getOAI2Xsl() {
+        return ``;
     }
     setRecordXml(rec) {
         let xml = `<?xml version="1.0" encoding="utf-8"?>
