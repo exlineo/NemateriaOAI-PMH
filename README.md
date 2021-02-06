@@ -1,75 +1,27 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
-
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
+# Nemateria
+Nemateria est un écosystème logiciel permettant la gestion et la diffusion de collections numérisées. Il s'appuie et étant la norme Dublin Core pour permettre des usages étendus par l'intégration d'espaces de noms (namespaces) spécifiques au projet et étendables à d'autres usages.  
+Le projet est dédié à la gestion et la diffusion de collections numérisées : images, vidéos, audios. Il offre des solutions pour le séquençage de médias (vidéos, audio), la mise en série d'images et la gestion de relations riches (audios, vidéos, images, pdf).
+## Processus de gestion des données
+La gestion des données est construite en plusieurs étapes :
+1 - Données XMP  
+Les données sont stockées et éditées dans les médias eux mêmes sur un format [XMP](https://fr.wikipedia.org/wiki/Extensible_Metadata_Platform) grâce à des logiciels spécifiques (ex. [Adobe Bridge](https://www.adobe.com/fr/products/bridge.html), [open source](https://awesomeopensource.com/projects/exif)). Cette solution permet une édition individualisée des données et une portabilité dans les documents. Les métadonnées XMP sont autonomes, accessibles et éditables par tout logiciel à tout moment.  
+Les documents comprenant des données XMP doivent être déposés (via FTP) sur un serveur pour être scannés.
+2 - L'administration des données  
+[NemateriaAdmin](https://github.com/exlineo/NemateriaAdmin) offre une solution en mode SaaS pour scanner les métadonnées, les filtrer en intégrant les namespaces normalisés (Dublin Core), les namespaces du projet (collection, informateurs, participants, relations, séquences, séries) et ceux que vous souhaiterez créer pour vos usages. Les données XMP peuvent être étendues par vos soins et gérées dans Nemateria Admin en configurant des filtres. L'application se connecte à une base de données pour stocker les notices et collections que vous souhaitez valoriser dans vos collections en ligne.
+3 - Le stockage et la distrbution des notices et collections  
+[NemateriaRest](https://github.com/exlineo/NemateriaRest) est un serveur REST dédié à la gestion et la distribution des données aux applications du projet. Il se connecte à NemateriaAdmin pour permettre leur administration. Il peut fournir vos données pour une valorisation sur vos sites Internet et vos collections numériques.
+4 - Le moissonnage pour le partage  
+[NemateriaOAI-PMH](https://github.com/exlineo/NemateriaOAI-PMH) permet le moissonnage des données stockées. Le serveur respecte la norme [OAI-PMH](https://openarchives.org/pmh/). Consultez la page du serveur pour avoir des informations sur le requêtage.  
+5 - La diffusion en ligne  
+La valorisation sur vos sites Internet est fournie via deux modules : un composant pour le CMS Joomla et une version HTML. Ces outils peuvent être installés sur vos site Internet.  
+## L'écosystème technique
+Nemateria comprend un ensemble d'applications développées dans des technologies contemporaines permettant d'assurer l'évolutivité des données tout en garantissant l'appuie des normes en usage (actuelles et futures).   
+- [ExifTool](https://exiftool.org/) permet de scanner les dossiers. Il doit être installé et paramétré sur votre serveur et dans l'application NemateriaAdmin (accès au dossier à scanner) pour fournir les données XMP brutes.
+- nous avons choisi de nous appuyer sur le système de gestion de base de données [MongoDB](https://www.mongodb.com/fr) pour sa capacité à gérer des données variables. Les données stockées dans vos médias (XMP) vont être moissonnées et stockées dans une base mongoDB. Un filtre est appliqué lors du moissonnage pour sélectionner les métadonnées que vous souhaitez exploiter. Les métadonnées brutes sont stockées pour une exploitation ultérieure. Toutes peuvent être moissonnées avec le serveur NemateriaOAI-PMH.
+- en terme de développements, nous pourrez étendre le projet en utilisant [Angular](https://angular.io/) et [NestJS](https://nestjs.com/). Tous nos projets s'appuient sur [NodeJS](https://nodejs.org/en/).
   
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-  Nest is [MIT licensed](LICENSE).
+## Open Source
+Les technologies utilisées pour les développements s'appuient sur des licences open source permettant leur utilisation.
+Tous nos développements sont mis à votre disposition sous licence GPL3. Le code est fourni gratuitement pour tous usages. Il est livré sans garanties. Les auteurs (exlineo) doivent être cités lors de leur utilisation.
+## [Nemateria.eu](http://www.nemateria.eu)
+Le site Internet offre des informations génériques et des tutoriels pour l'utilisation, le paramétrage et la mise en oeuvre des différents composants du projet.
