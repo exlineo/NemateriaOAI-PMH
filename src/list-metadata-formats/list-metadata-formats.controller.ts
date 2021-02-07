@@ -1,19 +1,23 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Header } from '@nestjs/common';
+import { PmhService } from 'src/providers/services/pmh/pmh.service';
 
 @Controller('ListMetadataFormats')
 export class ListMetadataFormatsController {
+    constructor(private readonly pmhServ:PmhService){}
     /**
      * Get list of all metadate formats
      */
-    @Get('')
-    async listFormats(): Promise<object>  {
-        return new Object();
+    @Get()
+    @Header('Content-Type', 'text/xml')
+    async listFormats(): Promise<any>  {
+        return this.pmhServ.getistMedataFormats();
     }
     /**
      * Get a specific metadata format
      * @param identifier Identifier of the Metadata format
      */
     @Get('/:identifier')
+    @Header('Content-Type', 'text/xml')
     async listFormat(@Param('identifier') identifier): Promise<object>  {
         return new Object();
     }

@@ -4,5 +4,6 @@ import * as mongoose from 'mongoose';
  */
 export const GenericSchema = new mongoose.Schema({ any: {} });
 export const SetSchema = new mongoose.Schema({ any: {} });
-export const RecordSchema = new mongoose.Schema({ any: {} });
+export const NoticeSchema = new mongoose.Schema({ any: {} });
+export const IdentifySchema = new mongoose.Schema({ any: {} });
 export const MetaSchema = new mongoose.Schema({ any: {} });

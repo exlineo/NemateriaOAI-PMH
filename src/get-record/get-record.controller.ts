@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Header } from '@nestjs/common';
 
 @Controller('/GetRecord')
 export class GetRecordController {
@@ -8,6 +8,7 @@ export class GetRecordController {
      * @param identifier 
      */
     @Get('/:identifier')
+    @Header('Content-Type', 'text/xml')
     async findRecord(@Param('identifier') identifier, @Param('metadataPrefix') metadataPrefix): Promise<object> {
         return new Object();
     }
@@ -17,6 +18,7 @@ export class GetRecordController {
      * @param metadataPrefix Préfix sur le type de données à moissonner. Par défaut oai_dc
      */
     @Get('/:identifier/:metadataPrefix')
+    @Header('Content-Type', 'text/xml')
     async findRecordPrefix(@Param('identifier') identifier, @Param('metadataPrefix') metadataPrefix): Promise<object> {
         return new Object();
     }

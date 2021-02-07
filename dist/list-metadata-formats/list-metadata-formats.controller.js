@@ -14,9 +14,13 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ListMetadataFormatsController = void 0;
 const common_1 = require("@nestjs/common");
+const pmh_service_1 = require("../providers/services/pmh/pmh.service");
 let ListMetadataFormatsController = class ListMetadataFormatsController {
+    constructor(pmhServ) {
+        this.pmhServ = pmhServ;
+    }
     async listFormats() {
-        return new Object();
+        return this.pmhServ.getistMedataFormats();
     }
     async listFormat(identifier) {
         return new Object();
@@ -26,13 +30,15 @@ let ListMetadataFormatsController = class ListMetadataFormatsController {
     }
 };
 __decorate([
-    common_1.Get(''),
+    common_1.Get(),
+    common_1.Header('Content-Type', 'text/xml'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ListMetadataFormatsController.prototype, "listFormats", null);
 __decorate([
     common_1.Get('/:identifier'),
+    common_1.Header('Content-Type', 'text/xml'),
     __param(0, common_1.Param('identifier')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
@@ -45,7 +51,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ListMetadataFormatsController.prototype, "erreur", null);
 ListMetadataFormatsController = __decorate([
-    common_1.Controller('ListMetadataFormats')
+    common_1.Controller('ListMetadataFormats'),
+    __metadata("design:paramtypes", [pmh_service_1.PmhService])
 ], ListMetadataFormatsController);
 exports.ListMetadataFormatsController = ListMetadataFormatsController;
 //# sourceMappingURL=list-metadata-formats.controller.js.map

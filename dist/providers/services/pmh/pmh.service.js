@@ -15,9 +15,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PmhService = void 0;
 const mongoose_1 = require("mongoose");
 const common_1 = require("@nestjs/common");
+const identify_xml_1 = require("../../xml/identify-xml");
+const record_xml_1 = require("../../xml/record-xml");
+const set_xml_1 = require("../../xml/set-xml");
+const filtre_xml_1 = require("../../xml/filtre-xml");
 let PmhService = class PmhService {
-    constructor(genModel) {
+    constructor(genModel, noticeModel, idModel, setModel, filtreModel, idXml, recXml, setXml, filtreXml) {
         this.genModel = genModel;
+        this.noticeModel = noticeModel;
+        this.idModel = idModel;
+        this.setModel = setModel;
+        this.filtreModel = filtreModel;
+        this.idXml = idXml;
+        this.recXml = recXml;
+        this.setXml = setXml;
+        this.filtreXml = filtreXml;
     }
     async getIdentify(id) {
         return await this.genModel.findById(id).exec();
@@ -25,17 +37,43 @@ let PmhService = class PmhService {
     async getListIdentifiers() {
         return await this.genModel.find().exec();
     }
-    getistMedataFormats() {
+    async getistMedataFormats() {
+        const pref = await this.filtreModel.find().select('prefix -_id').lean().exec();
+        return this.filtreXml.setPrefix(pref);
     }
-    getListRecords() {
+    async geSet(id) {
+        let set = await this.setModel.findById(id).exec();
+        return this.setXml.setSetXml(set);
     }
-    getListSets() {
+    async geSets() {
+        let sets = await this.setModel.find().exec();
+        return this.setXml.setSetsXml(sets);
+    }
+    async getRecords() {
+        let recs = await this.noticeModel.find().exec();
+        return this.recXml.setRecordsXml(recs);
+    }
+    async getRecord(id) {
+        let rec = await this.genModel.findById(id).exec();
+        return this.recXml.setRecordXml(rec);
     }
 };
 PmhService = __decorate([
     common_1.Injectable(),
     __param(0, common_1.Inject('GENERIC_MODEL')),
-    __metadata("design:paramtypes", [mongoose_1.Model])
+    __param(1, common_1.Inject('NOTICE_MODEL')),
+    __param(2, common_1.Inject('IDENTIFY_MODEL')),
+    __param(3, common_1.Inject('SET_MODEL')),
+    __param(4, common_1.Inject('FILTRE_MODEL')),
+    __metadata("design:paramtypes", [mongoose_1.Model,
+        mongoose_1.Model,
+        mongoose_1.Model,
+        mongoose_1.Model,
+        mongoose_1.Model,
+        identify_xml_1.IdentifyXml,
+        record_xml_1.RecordXml,
+        set_xml_1.SetXml,
+        filtre_xml_1.FiltreXml])
 ], PmhService);
 exports.PmhService = PmhService;
 //# sourceMappingURL=pmh.service.js.map

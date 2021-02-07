@@ -1502,48 +1502,68 @@
         "affectsGlobalScope": false
       },
       "../src/models/schemas/pmh.schemas.ts": {
-        "version": "15dcae668fb8d6806dc19c219e51c20d7adb6ef3042bbd802cdeb20c8a535352",
-        "signature": "c3be9493664ffcbd127f197b9e6426106ab9b9e6bd8e97e3efeca735df8b7b52",
+        "version": "945925549591bad71ff46565e2e506a7ac5b93d65cc1cc66b4d99df7782b0838",
+        "signature": "7219fba967e2bbd38646958294743aa38ce31a1d52f7e6d6725ba096e60cb110",
         "affectsGlobalScope": false
       },
       "../src/get-record/get-record.controller.ts": {
-        "version": "8b32999750ccdb157ebb2bb2409155eeaf90cb9ddea0f8ff60a836adec8c679a",
+        "version": "2352147787fdf7f30b2768c7e07d8554385c649678d726380e821c8e45b3ec98",
         "signature": "5c8b1686efcffcfe216c2b1fbef146542bfcb87d4c8827ab1fd14577cff44fdc",
         "affectsGlobalScope": false
       },
       "../src/models/interfaces/id-i.interface.ts": {
-        "version": "d82ebb1c8f5446e066bac8b9d8e4a3c586fd8e6203cc2a0b586092b4bb131aa2",
-        "signature": "4216fdfb3b297f977613cba107ba673ec1a1d324d6089acafcde292c11475428",
+        "version": "38b4e42e80d7fc6068a79438f71b628fc4d553f0818b70184c00ffe277b2f448",
+        "signature": "3d512b65bc33a5d60a75f027badddcd41b98f6711a8cffb82e74c631192eab7f",
         "affectsGlobalScope": false
       },
-      "../src/providers/xml.ts": {
-        "version": "b582a02d9840a3484a424ba07f2bc421316074532ea22fc717de62dccb6544fc",
-        "signature": "23847959ede3fb1e548e54791c965ce7d81cccecbf841d354374609d45674203",
+      "../src/providers/xml/identify-xml.ts": {
+        "version": "83e9c673cac32915ad84df45675645e3f7ecef1c74ba2e4856b6f9e525277785",
+        "signature": "41ec37a0b15d87993f78722b1073ccb50da20f889c18578979723381195b84da",
         "affectsGlobalScope": false
       },
       "../src/identify/identify.controller.ts": {
-        "version": "d8c4248cc695e5e5b59161c3463d636a1411b2f6d85c4ce728ad1826e28a30f6",
-        "signature": "d2cdc0f14e80fca30f6889a305929527de27ce080d83e5b80a980be31ad63d21",
+        "version": "8251e427871b4a9d84453ffca5247745c9b10210971090a991c2478983300f78",
+        "signature": "a6c5a5dbe2227eb1c7f847474f9fd7107b8e0ad6ac899f81e14f5be92dfbde18",
         "affectsGlobalScope": false
       },
       "../src/models/interfaces/generic.interface.ts": {
-        "version": "59db2321929d93f6b33b8c647c29b5e81166d3a9832d61f0a877a9aa3213a882",
-        "signature": "390924f351892bcd73585aa0d421d1a40c924199766c3367208eefe265babb25",
+        "version": "8a1db615e8b279826e17d6055184005cc6b1ec463d2c422629d4581914edaff2",
+        "signature": "1789a72384c35da9ded1127eb81b2305c6c24065d2aab73b9bf95343b3001a28",
+        "affectsGlobalScope": false
+      },
+      "../src/providers/xml/record-xml.ts": {
+        "version": "988a75b7a3d20ffceea27a045782c88669db9ccd8ff613fad2080d7b0e6ef451",
+        "signature": "f2f6b750a95d7fa3abf93db9a68cca25926a5aa0e606baec87e538fe7a1e74eb",
+        "affectsGlobalScope": false
+      },
+      "../src/providers/xml/set-xml.ts": {
+        "version": "98772ae2aa219c6765293c2eb447390d085a162706c28a7c6c53b35c5055b061",
+        "signature": "4ec89fc1f450a77e2a06d92ef7da85c3b0f467bf4c1ca2aef61727edf0a1c92c",
+        "affectsGlobalScope": false
+      },
+      "../src/providers/xml/filtre-xml.ts": {
+        "version": "b0d651340eaacffead04f251477290f6ea6eb10505320405cb7ee9a5be4493df",
+        "signature": "1bf0e00f3947706cec867eb4fb66ac0dc7fcf6bc531704ad4309e9e89a4cda12",
         "affectsGlobalScope": false
       },
       "../src/providers/services/pmh/pmh.service.ts": {
-        "version": "c2b4718ae45752274f51076e054d97fe1834c02bbf701d2dff1002703e14ccd6",
-        "signature": "6e590499565062721ba4380aa6954ac320abf597a1e088979d9b3be5f472e217",
+        "version": "2a3030aaca464e054c9edf216756ad2a2070e622946f51c02cfeb8cd55c79d68",
+        "signature": "7c75e62f485e8055d0c6edfc915935a7149f8d2a285d707ce796eb031eb4db87",
+        "affectsGlobalScope": false
+      },
+      "../src/providers/xml.ts": {
+        "version": "6eb92dcbd0770f9ce19ae5c9c9825b9efc508b7970fd84c4a192b62b94ad19e1",
+        "signature": "cbce9e9ac60df3e6a982afc8d3998f5aecf153c015a4a2e664aefc1444f1b94c",
         "affectsGlobalScope": false
       },
       "../src/list-identifiers/list-identifiers.controller.ts": {
-        "version": "af0aba9502429634f626e44d4021199ba05f6c9eba51d72d1c362f3a398147b8",
+        "version": "c9e138c7da578b5fff660db41e7a13b38bcc4e0f13e8f04c60af154995f898f5",
         "signature": "b25efc4d7ded531e41c1e16118e962475c293df6cf8d4f3144c65f566d48af63",
         "affectsGlobalScope": false
       },
       "../src/list-metadata-formats/list-metadata-formats.controller.ts": {
-        "version": "f0794a2f795f2a61a29dda9cb5643b8215bee9a0f03d7c8220dc8f2e3a766092",
-        "signature": "648f177a8fd1ee71374de8b98b89d288d3d429ae17f2c30ac75d2dcbd1af5910",
+        "version": "97fe0eb5fee12af8ba7fd2a1ba2047d3816acc32c42ea4d2bcc086090573b468",
+        "signature": "34dd074e05c1b3571af7c5e8bc4bba6cf1a35d0caca4a24b5a7f11ad7280a168",
         "affectsGlobalScope": false
       },
       "../src/list-records/list-records.controller.ts": {
@@ -1552,7 +1572,7 @@
         "affectsGlobalScope": false
       },
       "../src/list-sets/list-sets.controller.ts": {
-        "version": "576e9372613cf34742a040c490cfccd8555b17410e3221895caa7b851c8230fc",
+        "version": "031d9a91f7cc8105b8d43abcd517e5bd0ea16f58e976cfffc6fe9cb1649c236d",
         "signature": "7063f8093fb680069c1aa2bf097faa560194f9b7939846eafa32eb5159f2369a",
         "affectsGlobalScope": false
       },
@@ -1562,17 +1582,17 @@
         "affectsGlobalScope": false
       },
       "../src/config.ts": {
-        "version": "683ce331a728d6070b3965b64d168cbbc4535d89d7aad319fd1ed9fa974fc53a",
-        "signature": "3d5bbfa9d62d3e084fe24b7c4cbf2ff1a563e0492fb9771a795b147c812221f3",
+        "version": "f4b590bb1192ab384db67523180dd26b8fe936335b250253ce752fe18c86b551",
+        "signature": "08adf636eb8f99554604a41184a051bace903fb89493c5fe39992ea8b4147a46",
         "affectsGlobalScope": false
       },
       "../src/providers/db.ts": {
-        "version": "30bc54d49ed7b91e8adadd6aa9e85df9ac3238a18338eb316b192f59f47c0d50",
-        "signature": "93eefcd989a2c040fd356fc6dcd05458c781fcb27fffaf1e762bf327d19be4fc",
+        "version": "1ee321260de517922ecf73180180783d75cd058b26fed0d1460c152e79188551",
+        "signature": "d299bf7b4f17ea4f8db22c7bead52a380d794f47c9294185773f7ccf839dc33b",
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "caa4fa3ef82d42708a99c6e7a8809c4dad8fa760878c5cfc26fd092eabc79dea",
+        "version": "bd175714468a837c6151e9ce923de51f377fff89c4f03321157e9838895cbd64",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -1817,8 +1837,13 @@
         "affectsGlobalScope": false
       },
       "../src/models/interfaces/set.interface.ts": {
-        "version": "aa3ad007f3f6bee107444da4995eb5d7ea882a3c58baf0ca46b68928f2d3c64a",
-        "signature": "70b0b989b8a9a84d9c8a79c0880b1a50548b5da26abf5f1a557e3c6024512972",
+        "version": "49197cbe26124e7571454de558ad6af42e120a533d599620323ca4de18d39e88",
+        "signature": "bd35dfb997ec03f795a4a5780702551c73a2700d9a2aff1ddb32933bd849f590",
+        "affectsGlobalScope": false
+      },
+      "../src/providers/xml/meta-xml.ts": {
+        "version": "061fb568174ff11029b5e31c4376cb4f7307f7947f79c986067f653a43f497b6",
+        "signature": "24e5a67dbf0a3d5656ca35021966ada4f8f4a0a8b6a338f22e76c4c765eb60a5",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -3352,7 +3377,10 @@
         "../src/models/schemas/pmh.schemas.ts",
         "../src/providers/db.ts",
         "../src/providers/services/pmh/pmh.service.ts",
-        "../src/providers/xml.ts",
+        "../src/providers/xml/filtre-xml.ts",
+        "../src/providers/xml/identify-xml.ts",
+        "../src/providers/xml/record-xml.ts",
+        "../src/providers/xml/set-xml.ts",
         "../src/request/request.controller.ts"
       ],
       "../src/app.service.ts": [
@@ -3364,7 +3392,7 @@
       "../src/identify/identify.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/models/interfaces/id-i.interface.ts",
-        "../src/providers/xml.ts"
+        "../src/providers/xml/identify-xml.ts"
       ],
       "../src/list-identifiers/list-identifiers.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -3373,7 +3401,8 @@
         "../src/providers/xml.ts"
       ],
       "../src/list-metadata-formats/list-metadata-formats.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/providers/services/pmh/pmh.service.ts"
       ],
       "../src/list-records/list-records.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -3410,11 +3439,32 @@
       "../src/providers/services/pmh/pmh.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
-        "../src/models/interfaces/generic.interface.ts"
+        "../src/models/interfaces/generic.interface.ts",
+        "../src/providers/xml/filtre-xml.ts",
+        "../src/providers/xml/identify-xml.ts",
+        "../src/providers/xml/record-xml.ts",
+        "../src/providers/xml/set-xml.ts"
       ],
       "../src/providers/xml.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/models/interfaces/id-i.interface.ts"
+      ],
+      "../src/providers/xml/filtre-xml.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/worker_threads.d.ts"
+      ],
+      "../src/providers/xml/identify-xml.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/models/interfaces/id-i.interface.ts"
+      ],
+      "../src/providers/xml/meta-xml.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/providers/xml/record-xml.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/providers/xml/set-xml.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/request/request.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -4692,11 +4742,14 @@
         "../src/app.service.ts"
       ],
       "../src/identify/identify.controller.ts": [
-        "../src/providers/xml.ts"
+        "../src/providers/xml/identify-xml.ts"
       ],
       "../src/list-identifiers/list-identifiers.controller.ts": [
         "../src/providers/services/pmh/pmh.service.ts",
         "../src/providers/xml.ts"
+      ],
+      "../src/list-metadata-formats/list-metadata-formats.controller.ts": [
+        "../src/providers/services/pmh/pmh.service.ts"
       ],
       "../src/models/interfaces/generic.interface.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
@@ -4712,7 +4765,11 @@
       ],
       "../src/providers/services/pmh/pmh.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
-        "../src/models/interfaces/generic.interface.ts"
+        "../src/models/interfaces/generic.interface.ts",
+        "../src/providers/xml/filtre-xml.ts",
+        "../src/providers/xml/identify-xml.ts",
+        "../src/providers/xml/record-xml.ts",
+        "../src/providers/xml/set-xml.ts"
       ],
       "../src/request/request.controller.ts": [
         "../src/providers/services/pmh/pmh.service.ts"
@@ -5128,6 +5185,11 @@
       "../src/providers/db.ts",
       "../src/providers/services/pmh/pmh.service.ts",
       "../src/providers/xml.ts",
+      "../src/providers/xml/filtre-xml.ts",
+      "../src/providers/xml/identify-xml.ts",
+      "../src/providers/xml/meta-xml.ts",
+      "../src/providers/xml/record-xml.ts",
+      "../src/providers/xml/set-xml.ts",
       "../src/request/request.controller.ts"
     ]
   },

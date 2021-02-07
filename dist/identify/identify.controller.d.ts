@@ -1,6 +1,6 @@
-import { SetXml } from '../providers/xml';
+import { IdentifyXml } from '../providers/xml/identify-xml';
 export declare class IdentifyController {
-    private readonly xml;
-    constructor(xml: SetXml);
+    private readonly idXml;
+    constructor(idXml: IdentifyXml);
     infosOAI(): Promise<string>;
 }

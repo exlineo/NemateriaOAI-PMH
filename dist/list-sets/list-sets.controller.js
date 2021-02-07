@@ -24,6 +24,7 @@ let ListSetsController = class ListSetsController {
 };
 __decorate([
     common_1.Get('/:resumptionToken'),
+    common_1.Header('Content-Type', 'text/xml'),
     __param(0, common_1.Param('resumptionToken')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),

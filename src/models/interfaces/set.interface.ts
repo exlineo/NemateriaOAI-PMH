@@ -9,7 +9,6 @@ export interface SetModel extends Document {
     readonly createur: string;
     readonly fond:string;
     readonly langue: string;
-    readonly groupe?: Array<string>;
     readonly notices?:Array<string> | Array<number>;
     readonly series?:Array<string>;
 }

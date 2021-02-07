@@ -11,15 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IdentifyController = void 0;
 const common_1 = require("@nestjs/common");
-const id_i_interface_1 = require("../models/interfaces/id-i.interface");
-const xml_1 = require("../providers/xml");
+const identify_xml_1 = require("../providers/xml/identify-xml");
 let IdentifyController = class IdentifyController {
-    constructor(xml) {
-        this.xml = xml;
+    constructor(idXml) {
+        this.idXml = idXml;
     }
     async infosOAI() {
-        console.log(this.xml.setIdentifyXml(new id_i_interface_1.ID()));
-        return this.xml.setIdentifyXml(new id_i_interface_1.ID());
+        console.log(this.idXml.setIdentifyXml());
+        return this.idXml.setIdentifyXml();
     }
 };
 __decorate([
@@ -31,7 +30,7 @@ __decorate([
 ], IdentifyController.prototype, "infosOAI", null);
 IdentifyController = __decorate([
     common_1.Controller('Identify'),
-    __metadata("design:paramtypes", [xml_1.SetXml])
+    __metadata("design:paramtypes", [identify_xml_1.IdentifyXml])
 ], IdentifyController);
 exports.IdentifyController = IdentifyController;
 //# sourceMappingURL=identify.controller.js.map

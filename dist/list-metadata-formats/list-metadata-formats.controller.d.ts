@@ -1,5 +1,8 @@
+import { PmhService } from 'src/providers/services/pmh/pmh.service';
 export declare class ListMetadataFormatsController {
-    listFormats(): Promise<object>;
+    private readonly pmhServ;
+    constructor(pmhServ: PmhService);
+    listFormats(): Promise<any>;
     listFormat(identifier: any): Promise<object>;
     erreur(): Promise<string>;
 }

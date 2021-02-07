@@ -27,6 +27,7 @@ let GetRecordController = class GetRecordController {
 };
 __decorate([
     common_1.Get('/:identifier'),
+    common_1.Header('Content-Type', 'text/xml'),
     __param(0, common_1.Param('identifier')), __param(1, common_1.Param('metadataPrefix')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
@@ -34,6 +35,7 @@ __decorate([
 ], GetRecordController.prototype, "findRecord", null);
 __decorate([
     common_1.Get('/:identifier/:metadataPrefix'),
+    common_1.Header('Content-Type', 'text/xml'),
     __param(0, common_1.Param('identifier')), __param(1, common_1.Param('metadataPrefix')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),

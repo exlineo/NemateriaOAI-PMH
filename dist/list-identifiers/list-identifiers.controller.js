@@ -30,6 +30,7 @@ let ListIdentifiersController = class ListIdentifiersController {
 };
 __decorate([
     common_1.Get('/:from/:until/:metadataPrefix/:set/:resumptionToken'),
+    common_1.Header('Content-Type', 'text/xml'),
     __param(0, common_1.Param('from')), __param(1, common_1.Param('until')), __param(2, common_1.Param('metadataPrefix')), __param(3, common_1.Param('set')), __param(4, common_1.Param('resumptionToken')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Object, Object, Object]),

@@ -1,4 +1,4 @@
-import { Controller, Param, Get } from '@nestjs/common';
+import { Controller, Param, Get, Header } from '@nestjs/common';
 import { unwatchFile } from 'fs';
 import { PmhService } from '../providers/services/pmh/pmh.service';
 import { SetXml } from '../providers/xml';
@@ -15,6 +15,7 @@ export class ListIdentifiersController {
      * @param resumptionToken 
      */
     @Get('/:from/:until/:metadataPrefix/:set/:resumptionToken')
+    @Header('Content-Type', 'text/xml')
     async listIDs(@Param('from') from, @Param('until') until, @Param('metadataPrefix') metadataPrefix, @Param('set') set, @Param('resumptionToken') resumptionToken): Promise<object>  {
         return await new Object();
     }

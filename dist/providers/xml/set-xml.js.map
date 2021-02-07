@@ -1,0 +1,1 @@
+{"version":3,"file":"set-xml.js","sourceRoot":"","sources":["../../../src/providers/xml/set-xml.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA4C;AAG5C,IAAa,MAAM,GAAnB,MAAa,MAAM;IAEf,SAAS,CAAC,GAAO;QACb,OAAO,GAAG,CAAC;IACf,CAAC;IACD,UAAU,CAAC,IAAe;QACtB,OAAO,IAAI,CAAC;IAChB,CAAC;CACJ,CAAA;AARY,MAAM;IADlB,mBAAU,EAAE;GACA,MAAM,CAQlB;AARY,wBAAM"}

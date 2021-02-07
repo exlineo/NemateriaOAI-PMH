@@ -3,3 +3,4 @@ export declare const JWT_CONFIG: {
     secret: string;
     expiration: number;
 };
+export declare const ROOT = "http://vps550598.ovh.net/";
