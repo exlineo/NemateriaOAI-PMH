@@ -5,5 +5,6 @@ export declare class ListIdentifiersController {
     private readonly xml;
     constructor(pmhServ: PmhService, xml: SetXml);
     listIDs(from: any, until: any, metadataPrefix: any, set: any, resumptionToken: any): Promise<object>;
+    infosOAI(): Promise<string>;
     erreur(): Promise<string>;
 }

@@ -1511,24 +1511,19 @@
         "signature": "5c8b1686efcffcfe216c2b1fbef146542bfcb87d4c8827ab1fd14577cff44fdc",
         "affectsGlobalScope": false
       },
+      "../src/models/interfaces/generic.interface.ts": {
+        "version": "8a1db615e8b279826e17d6055184005cc6b1ec463d2c422629d4581914edaff2",
+        "signature": "1789a72384c35da9ded1127eb81b2305c6c24065d2aab73b9bf95343b3001a28",
+        "affectsGlobalScope": false
+      },
       "../src/models/interfaces/id-i.interface.ts": {
         "version": "38b4e42e80d7fc6068a79438f71b628fc4d553f0818b70184c00ffe277b2f448",
         "signature": "3d512b65bc33a5d60a75f027badddcd41b98f6711a8cffb82e74c631192eab7f",
         "affectsGlobalScope": false
       },
       "../src/providers/xml/identify-xml.ts": {
-        "version": "83e9c673cac32915ad84df45675645e3f7ecef1c74ba2e4856b6f9e525277785",
-        "signature": "41ec37a0b15d87993f78722b1073ccb50da20f889c18578979723381195b84da",
-        "affectsGlobalScope": false
-      },
-      "../src/identify/identify.controller.ts": {
-        "version": "8251e427871b4a9d84453ffca5247745c9b10210971090a991c2478983300f78",
-        "signature": "a6c5a5dbe2227eb1c7f847474f9fd7107b8e0ad6ac899f81e14f5be92dfbde18",
-        "affectsGlobalScope": false
-      },
-      "../src/models/interfaces/generic.interface.ts": {
-        "version": "8a1db615e8b279826e17d6055184005cc6b1ec463d2c422629d4581914edaff2",
-        "signature": "1789a72384c35da9ded1127eb81b2305c6c24065d2aab73b9bf95343b3001a28",
+        "version": "61f1ab1386eca42250ca93c7a6a7812ff8dbaf02fdb757c8b27984008ca1d33d",
+        "signature": "5c26b711370f99b9c2d262fbe29054ea34a8c057c62c7a2feef0db1facfcfa81",
         "affectsGlobalScope": false
       },
       "../src/providers/xml/record-xml.ts": {
@@ -1547,8 +1542,13 @@
         "affectsGlobalScope": false
       },
       "../src/providers/services/pmh/pmh.service.ts": {
-        "version": "2a3030aaca464e054c9edf216756ad2a2070e622946f51c02cfeb8cd55c79d68",
-        "signature": "7c75e62f485e8055d0c6edfc915935a7149f8d2a285d707ce796eb031eb4db87",
+        "version": "a9ad5d851df1127ae351effa2c9d51b7d06a575727f7ba86959a860423a238b3",
+        "signature": "e318dbdc2a71fea289c1ae3bcfc9d4de88cfbb7aea4457193992e9c168aab274",
+        "affectsGlobalScope": false
+      },
+      "../src/identify/identify.controller.ts": {
+        "version": "259bd5c0f21f9fb6a498c552ce0fd70ad9b046aa7a5b9e2f32f832236e85d980",
+        "signature": "81d9be820e13dc612b682b9a20382277280fb31d1a3cdc3f5889e84be71b7e6f",
         "affectsGlobalScope": false
       },
       "../src/providers/xml.ts": {
@@ -1557,8 +1557,8 @@
         "affectsGlobalScope": false
       },
       "../src/list-identifiers/list-identifiers.controller.ts": {
-        "version": "c9e138c7da578b5fff660db41e7a13b38bcc4e0f13e8f04c60af154995f898f5",
-        "signature": "b25efc4d7ded531e41c1e16118e962475c293df6cf8d4f3144c65f566d48af63",
+        "version": "41e0bd2904afc49bddb0d1f62a7f67538b3bbf2d4cfb343af1ceb1ad3563e799",
+        "signature": "916ed5ef2f53683a23ca51553367b1029c0447e073620eecae9c4f630d6f3c7e",
         "affectsGlobalScope": false
       },
       "../src/list-metadata-formats/list-metadata-formats.controller.ts": {
@@ -1587,7 +1587,7 @@
         "affectsGlobalScope": false
       },
       "../src/providers/db.ts": {
-        "version": "1ee321260de517922ecf73180180783d75cd058b26fed0d1460c152e79188551",
+        "version": "491edff708b33c4aec6f74a60bc81d7ee837b3e84e502e1908e141a3f7000520",
         "signature": "d299bf7b4f17ea4f8db22c7bead52a380d794f47c9294185773f7ccf839dc33b",
         "affectsGlobalScope": false
       },
@@ -3392,6 +3392,7 @@
       "../src/identify/identify.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/models/interfaces/id-i.interface.ts",
+        "../src/providers/services/pmh/pmh.service.ts",
         "../src/providers/xml/identify-xml.ts"
       ],
       "../src/list-identifiers/list-identifiers.controller.ts": [
@@ -3440,6 +3441,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/models/interfaces/generic.interface.ts",
+        "../src/models/interfaces/id-i.interface.ts",
         "../src/providers/xml/filtre-xml.ts",
         "../src/providers/xml/identify-xml.ts",
         "../src/providers/xml/record-xml.ts",
@@ -4742,7 +4744,7 @@
         "../src/app.service.ts"
       ],
       "../src/identify/identify.controller.ts": [
-        "../src/providers/xml/identify-xml.ts"
+        "../src/providers/services/pmh/pmh.service.ts"
       ],
       "../src/list-identifiers/list-identifiers.controller.ts": [
         "../src/providers/services/pmh/pmh.service.ts",
@@ -4770,6 +4772,9 @@
         "../src/providers/xml/identify-xml.ts",
         "../src/providers/xml/record-xml.ts",
         "../src/providers/xml/set-xml.ts"
+      ],
+      "../src/providers/xml/identify-xml.ts": [
+        "../src/models/interfaces/id-i.interface.ts"
       ],
       "../src/request/request.controller.ts": [
         "../src/providers/services/pmh/pmh.service.ts"

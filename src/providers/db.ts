@@ -38,7 +38,7 @@ export const noticeProvider = [
 export const idProvider = [
   {
     provide: 'IDENTIFY_MODEL',
-    useFactory: (connection: mongoose.Connection) => connection.model('Identify', IdentifySchema),
+    useFactory: (connection: mongoose.Connection) => connection.model('Identify', IdentifySchema, 'identify'),
     inject: ['DB_MODEL'],
   },
 ];

@@ -19,6 +19,7 @@ const identify_xml_1 = require("../../xml/identify-xml");
 const record_xml_1 = require("../../xml/record-xml");
 const set_xml_1 = require("../../xml/set-xml");
 const filtre_xml_1 = require("../../xml/filtre-xml");
+const id_i_interface_1 = require("../../../models/interfaces/id-i.interface");
 let PmhService = class PmhService {
     constructor(genModel, noticeModel, idModel, setModel, filtreModel, idXml, recXml, setXml, filtreXml) {
         this.genModel = genModel;
@@ -31,11 +32,19 @@ let PmhService = class PmhService {
         this.setXml = setXml;
         this.filtreXml = filtreXml;
     }
-    async getIdentify(id) {
-        return await this.genModel.findById(id).exec();
+    async getIdentify() {
+        let data = await this.idModel.find().limit(1);
+        console.log(data, this.idModel);
+        return this.idXml.setIdentifyXml(data);
+    }
+    async getIdIdentify(id) {
+        let data = await this.idModel.findById(id).exec();
+        console.log(data, this.idModel);
+        return this.idXml.setIdentifyXml(data);
     }
     async getListIdentifiers() {
-        return await this.genModel.find().exec();
+        const xml = await this.genModel.find().lean().exec();
+        return this.idXml.setListIdentifyXml(xml);
     }
     async getistMedataFormats() {
         const pref = await this.filtreModel.find().select('prefix -_id').lean().exec();

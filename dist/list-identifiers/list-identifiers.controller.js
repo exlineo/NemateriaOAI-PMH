@@ -24,6 +24,9 @@ let ListIdentifiersController = class ListIdentifiersController {
     async listIDs(from, until, metadataPrefix, set, resumptionToken) {
         return await new Object();
     }
+    async infosOAI() {
+        return this.pmhServ.getListIdentifiers();
+    }
     async erreur() {
         return "Merci de vérifier les paramètres transmis dans votre URL";
     }
@@ -36,6 +39,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object, Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], ListIdentifiersController.prototype, "listIDs", null);
+__decorate([
+    common_1.Get(),
+    common_1.Header('Content-Type', 'text/xml'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], ListIdentifiersController.prototype, "infosOAI", null);
 __decorate([
     common_1.Get('*'),
     __metadata("design:type", Function),

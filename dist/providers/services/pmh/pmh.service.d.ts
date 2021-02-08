@@ -15,8 +15,9 @@ export declare class PmhService {
     private readonly setXml;
     private readonly filtreXml;
     constructor(genModel: Model<GenericI>, noticeModel: Model<GenericI>, idModel: Model<GenericI>, setModel: Model<GenericI>, filtreModel: Model<GenericI>, idXml: IdentifyXml, recXml: RecordXml, setXml: SetXml, filtreXml: FiltreXml);
-    getIdentify(id: any): Promise<GenericI>;
-    getListIdentifiers(): Promise<GenericI[]>;
+    getIdentify(): Promise<string>;
+    getIdIdentify(id: any): Promise<string>;
+    getListIdentifiers(): Promise<string>;
     getistMedataFormats(): Promise<string>;
     geSet(id: any): Promise<any>;
     geSets(): Promise<any[]>;

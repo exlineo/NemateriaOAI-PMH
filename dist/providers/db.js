@@ -27,7 +27,7 @@ exports.noticeProvider = [
 exports.idProvider = [
     {
         provide: 'IDENTIFY_MODEL',
-        useFactory: (connection) => connection.model('Identify', pmh_schemas_1.IdentifySchema),
+        useFactory: (connection) => connection.model('Identify', pmh_schemas_1.IdentifySchema, 'identify'),
         inject: ['DB_MODEL'],
     },
 ];

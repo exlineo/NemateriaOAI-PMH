@@ -19,6 +19,11 @@ export class ListIdentifiersController {
     async listIDs(@Param('from') from, @Param('until') until, @Param('metadataPrefix') metadataPrefix, @Param('set') set, @Param('resumptionToken') resumptionToken): Promise<object>  {
         return await new Object();
     }
+    @Get()
+    @Header('Content-Type', 'text/xml')
+    async infosOAI() {
+        return this.pmhServ.getListIdentifiers();
+    }
     /**
      * Return error if any
      */
