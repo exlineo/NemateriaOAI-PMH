@@ -16,12 +16,13 @@ exports.RequestController = void 0;
 const common_1 = require("@nestjs/common");
 const pmh_service_1 = require("../providers/services/pmh/pmh.service");
 let RequestController = class RequestController {
-    constructor(pms) {
-        this.pms = pms;
+    constructor(pmhServ) {
+        this.pmhServ = pmhServ;
     }
     async checkVerb(verb) {
         switch (verb) {
             case 'Identify':
+                this.pmhServ.getIdentify();
                 break;
             case 'GetRecord':
                 break;

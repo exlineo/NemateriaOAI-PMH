@@ -3,6 +3,7 @@ import { PmhService } from '../providers/services/pmh/pmh.service';
 
 @Controller('ListSets')
 export class ListSetsController {
+    constructor(private pmhServ:PmhService){}
     /**
      * Get sets list from server
      * @param resumptionToken resumptionToken choosen
@@ -15,8 +16,9 @@ export class ListSetsController {
     /**
      * Return error if any
      */
-    @Get('*')
-    async erreur() {
-        return "Merci de vérifier les paramètres transmis dans votre URL";
+    @Get()
+    @Header('Content-Type', 'text/xml')
+    async sets() {
+        return this.pmhServ.getSets();
     }
 }

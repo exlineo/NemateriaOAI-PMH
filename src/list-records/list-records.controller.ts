@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Header } from '@nestjs/common';
 
 @Controller('ListRecords')
 export class ListRecordsController {
@@ -11,6 +11,7 @@ export class ListRecordsController {
      * @param resumptionToken 
      */
     @Get('/:from/:until/:metadataPrefix/:set/:resumptionToken')
+    @Header('Content-Type', 'text/xml')
     async listIDs(@Param('from') from, @Param('until') until, @Param('metadataPrefix') metadataPrefix, @Param('set') set, @Param('resumptionToken') resumptionToken): Promise<object>  {
         return new Object();
     }

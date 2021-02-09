@@ -25,16 +25,16 @@ export class PmhService {
      * @param id Identifiant de l'Idenfitfy du serveur à renvoyer (obsolète)
      */
     async getIdentify() {
-        let data:any = await this.idModel.find().limit(1);
-        console.log(data, this.idModel);
-        return this.idXml.setIdentifyXml(data);
+        let data:any = await this.idModel.find().lean().limit(1);
+        // console.log(data, this.idModel);
+        return this.idXml.setIdentifyXml(data[0]);
     }
     /**
      * Renvoyer l'Identify du serveur
      * @param id Identifiant de l'Idenfitfy du serveur à renvoyer (obsolète)
      */
     async getIdIdentify(id) {
-        let data:any = await this.idModel.findById(id).exec();
+        let data:any = await this.idModel.findById(id).lean().exec();
         console.log(data, this.idModel);
         return this.idXml.setIdentifyXml(data);
     }
@@ -55,16 +55,16 @@ export class PmhService {
     /**
      * Récupérer un SET en particulier
      */
-    async geSet(id: any) {
+    async getSet(id: any) {
         let set = await this.setModel.findById(id).exec();
         return this.setXml.setSetXml(set);
     }
     /**
      * Obtenir la liste des SETS
      */
-    async geSets() {
-        let sets = await this.setModel.find().exec();
-        return this.setXml.setSetsXml(sets);
+    async getSets() {
+        let sets = await this.setModel.find().lean().exec();
+        return this.setXml.setListSetsXml(sets);
     }
     /**
      * Récupérer la liste des NOTICES du serveur

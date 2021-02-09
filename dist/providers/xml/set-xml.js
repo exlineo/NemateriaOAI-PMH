@@ -8,12 +8,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SetXml = void 0;
 const common_1 = require("@nestjs/common");
+const config_1 = require("../../config");
 let SetXml = class SetXml {
+    setXml(i) {
+        return `<set>
+                    <setName>${i.titre}</setName>
+                    <setSpec>fonds:${i.fonds}</setSpec>
+                    <setDescription>
+                        <oai_dc:dc 
+                            xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+                            xmlns:dc="http://purl.org/dc/elements/1.1/" 
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+                            http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+                            <dc:description>${i.description}</dc:description>
+                        </oai_dc:dc>
+                    </setDescription>
+                </set>`;
+    }
+    xml(sets) {
+        return `<?xml version='1.0' encoding='UTF-8'?>
+        <?xml-stylesheet type='text/xsl' href='http://vps550598.ovh.net/oai/xml/oai2.xsl' ?>
+            <OAI-PMH xmlns='http://www.openarchives.org/OAI/2.0/' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd'>
+            <responseDate>${new Date(Date.now()).toLocaleDateString("fr-FR")}</responseDate>
+            <request verb='ListSets'>${config_1.ROOT}</request>
+            <ListSets>
+                ${sets}
+            </ListSets>
+        </OAI-PMH>`;
+    }
     setSetXml(rec) {
         return rec;
     }
-    setSetsXml(recs) {
-        return recs;
+    setListSetsXml(recs) {
+        let str = '';
+        if (Array.isArray(recs)) {
+            recs.forEach(i => str += this.setXml(i));
+        }
+        return this.xml(str);
     }
 };
 SetXml = __decorate([

@@ -33,12 +33,11 @@ let PmhService = class PmhService {
         this.filtreXml = filtreXml;
     }
     async getIdentify() {
-        let data = await this.idModel.find().limit(1);
-        console.log(data, this.idModel);
-        return this.idXml.setIdentifyXml(data);
+        let data = await this.idModel.find().lean().limit(1);
+        return this.idXml.setIdentifyXml(data[0]);
     }
     async getIdIdentify(id) {
-        let data = await this.idModel.findById(id).exec();
+        let data = await this.idModel.findById(id).lean().exec();
         console.log(data, this.idModel);
         return this.idXml.setIdentifyXml(data);
     }
@@ -50,13 +49,13 @@ let PmhService = class PmhService {
         const pref = await this.filtreModel.find().select('prefix -_id').lean().exec();
         return this.filtreXml.setPrefix(pref);
     }
-    async geSet(id) {
+    async getSet(id) {
         let set = await this.setModel.findById(id).exec();
         return this.setXml.setSetXml(set);
     }
-    async geSets() {
-        let sets = await this.setModel.find().exec();
-        return this.setXml.setSetsXml(sets);
+    async getSets() {
+        let sets = await this.setModel.find().lean().exec();
+        return this.setXml.setListSetsXml(sets);
     }
     async getRecords() {
         let recs = await this.noticeModel.find().exec();

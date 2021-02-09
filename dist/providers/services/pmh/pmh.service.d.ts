@@ -19,8 +19,8 @@ export declare class PmhService {
     getIdIdentify(id: any): Promise<string>;
     getListIdentifiers(): Promise<string>;
     getistMedataFormats(): Promise<string>;
-    geSet(id: any): Promise<any>;
-    geSets(): Promise<any[]>;
+    getSet(id: any): Promise<any>;
+    getSets(): Promise<string>;
     getRecords(): Promise<void>;
     getRecord(id: any): Promise<void>;
 }

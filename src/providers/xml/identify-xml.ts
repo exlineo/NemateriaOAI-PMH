@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { ROOT } from '../../config';
 
 import { ID } from '../../models/interfaces/id-i.interface';
 
@@ -41,32 +42,29 @@ export class IdentifyXml {
                         </eprints>
                         </description>
                         <description>
-                        <friends 
-                            xmlns="http://www.openarchives.org/OAI/2.0/friends/" 
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/friends/
-                            http://www.openarchives.org/OAI/2.0/friends.xsd">
+                        <friends xmlns="http://www.openarchives.org/OAI/2.0/friends/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/friends/ http://www.openarchives.org/OAI/2.0/friends.xsd">
                             <baseURL>http://vps550598.ovh.net/nemateriaoai/</baseURL>
                         </friends>
                     </description>
                 </Identify>`;
     }
     // Composer le XML complet
-    xml(baseurl: string, identify: string): string{
+    xml(identify: string): string{
         return `<?xml version='1.0' encoding='UTF-8'?>
         <?xml-stylesheet type='text/xsl' href='http://vps550598.ovh.net/oai/xml/oai2.xsl' ?>
             <OAI-PMH xmlns='http://www.openarchives.org/OAI/2.0/' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd'>
-            <responseDate>${new Date(Date.now()).toLocaleDateString("fr-FR")}</responseDate>
-            <request verb='Identify'>${baseurl}</request>
-            ${identify}
-        </OAI-PMH>`;
+                <responseDate>${new Date(Date.now()).toLocaleDateString("fr-FR")}</responseDate>
+                <request verb='Identify'>${ROOT}</request>
+                ${identify}
+            </OAI-PMH>`;
     }
     /**
      * Modèles XML pour les ID
      */
     // setIdentifyXml(ID:any):string{
     setIdentifyXml(id:ID): string {
-        return this.xml(id.baseurl, this.idenfityXml(id));
+        return this.xml(this.idenfityXml(id));
     }
     /**
      * Obtenir la liste des identifiers
@@ -77,6 +75,6 @@ export class IdentifyXml {
         if (Array.isArray(ids)) {
             ids.forEach(i => str += this.idenfityXml(i));
         }
-        return this.xml(ids[0].baseurl, str);
+        return this.xml(str);
     }
 }

@@ -14,12 +14,16 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ListSetsController = void 0;
 const common_1 = require("@nestjs/common");
+const pmh_service_1 = require("../providers/services/pmh/pmh.service");
 let ListSetsController = class ListSetsController {
+    constructor(pmhServ) {
+        this.pmhServ = pmhServ;
+    }
     async listFormat(resumptionToken) {
         return new Object();
     }
-    async erreur() {
-        return "Merci de vérifier les paramètres transmis dans votre URL";
+    async sets() {
+        return this.pmhServ.getSets();
     }
 };
 __decorate([
@@ -31,13 +35,15 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ListSetsController.prototype, "listFormat", null);
 __decorate([
-    common_1.Get('*'),
+    common_1.Get(),
+    common_1.Header('Content-Type', 'text/xml'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
-], ListSetsController.prototype, "erreur", null);
+], ListSetsController.prototype, "sets", null);
 ListSetsController = __decorate([
-    common_1.Controller('ListSets')
+    common_1.Controller('ListSets'),
+    __metadata("design:paramtypes", [pmh_service_1.PmhService])
 ], ListSetsController);
 exports.ListSetsController = ListSetsController;
 //# sourceMappingURL=list-sets.controller.js.map

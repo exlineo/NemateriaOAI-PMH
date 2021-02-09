@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IdentifyXml = void 0;
 const common_1 = require("@nestjs/common");
+const config_1 = require("../../config");
 let IdentifyXml = class IdentifyXml {
     idenfityXml(id) {
         let idXml = id;
@@ -42,34 +43,31 @@ let IdentifyXml = class IdentifyXml {
                         </eprints>
                         </description>
                         <description>
-                        <friends 
-                            xmlns="http://www.openarchives.org/OAI/2.0/friends/" 
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/friends/
-                            http://www.openarchives.org/OAI/2.0/friends.xsd">
+                        <friends xmlns="http://www.openarchives.org/OAI/2.0/friends/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/friends/ http://www.openarchives.org/OAI/2.0/friends.xsd">
                             <baseURL>http://vps550598.ovh.net/nemateriaoai/</baseURL>
                         </friends>
                     </description>
                 </Identify>`;
     }
-    xml(baseurl, identify) {
+    xml(identify) {
         return `<?xml version='1.0' encoding='UTF-8'?>
         <?xml-stylesheet type='text/xsl' href='http://vps550598.ovh.net/oai/xml/oai2.xsl' ?>
             <OAI-PMH xmlns='http://www.openarchives.org/OAI/2.0/' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd'>
-            <responseDate>${new Date(Date.now()).toLocaleDateString("fr-FR")}</responseDate>
-            <request verb='Identify'>${baseurl}</request>
-            ${identify}
-        </OAI-PMH>`;
+                <responseDate>${new Date(Date.now()).toLocaleDateString("fr-FR")}</responseDate>
+                <request verb='Identify'>${config_1.ROOT}</request>
+                ${identify}
+            </OAI-PMH>`;
     }
     setIdentifyXml(id) {
-        return this.xml(id.baseurl, this.idenfityXml(id));
+        return this.xml(this.idenfityXml(id));
     }
     setListIdentifyXml(ids) {
         let str = '';
         if (Array.isArray(ids)) {
             ids.forEach(i => str += this.idenfityXml(i));
         }
-        return this.xml(ids[0].baseurl, str);
+        return this.xml(str);
     }
 };
 IdentifyXml = __decorate([
