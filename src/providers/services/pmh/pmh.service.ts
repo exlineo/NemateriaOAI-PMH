@@ -1,17 +1,17 @@
 import { Model } from 'mongoose';
 import { Injectable, Inject } from '@nestjs/common';
-import { GenericI } from '../../../models/interfaces/generic.interface';
+import { GenericI, NoticeI } from '../../../models/interfaces/generic.interface';
 import { IdentifyXml } from '../../xml/identify-xml';
 import { RecordXml } from '../../xml/record-xml';
 import { SetXml } from '../../xml/set-xml';
 import { FiltreXml } from '../../xml/filtre-xml';
-import { ID } from 'src/models/interfaces/id-i.interface';
+import { ID } from '../../../models/interfaces/id-i.interface';
 
 @Injectable()
 export class PmhService {
     constructor(
         @Inject('GENERIC_MODEL') private readonly genModel: Model<GenericI>,
-        @Inject('NOTICE_MODEL') private readonly noticeModel: Model<GenericI>,
+        @Inject('NOTICE_MODEL') private readonly noticeModel: Model<NoticeI>,
         @Inject('IDENTIFY_MODEL') private readonly idModel: Model<GenericI>,
         @Inject('SET_MODEL') private readonly setModel: Model<GenericI>,
         @Inject('FILTRE_MODEL') private readonly filtreModel: Model<GenericI>,
@@ -35,7 +35,6 @@ export class PmhService {
      */
     async getIdIdentify(id) {
         let data:any = await this.idModel.findById(id).lean().exec();
-        console.log(data, this.idModel);
         return this.idXml.setIdentifyXml(data);
     }
     /**
@@ -70,15 +69,32 @@ export class PmhService {
      * Récupérer la liste des NOTICES du serveur
      */
     async getRecords() {
-        let recs = await this.noticeModel.find().exec();
-        return this.recXml.setRecordsXml(recs);
+        let recs = await this.noticeModel.find().lean().exec();
+        return this.recXml.listRecordsXml(recs);
     }
     /**
      * Récupérer une NOTICE avec son ID
      * @param id Ientifiant unique du Dublin Core
      */
     async getRecord(id: any) {
-        let rec = await this.genModel.findById(id).exec();
-        return this.recXml.setRecordXml(rec);
+        let rec = await this.noticeModel.findById(id).lean().exec();
+        return this.recXml.recordXml(rec);
+    }
+    /**
+     * Récupérer une NOTICE avec son ID
+     * @param id Ientifiant unique du Dublin Core
+     */
+    async getRecordsMeta(p: string) {
+        let rec = await this.noticeModel.find({prefix:p}).lean().exec();
+        return this.recXml.listRecordsXml(rec);
+    }
+    /**
+     * Récupérer les documents d'un SET
+     * @param set Nom du SET dans lequel nous recherchons
+     */
+    async getRecordsSet(set:string){
+        // let recs = await this.noticeModel.find({metadonnees:{nemateria:{collection:{nom_collection:set}}}}).select('documents').lean().exec();
+        let recs = await this.noticeModel.find({'metadonnees.nemateria.collection.nom_collection':set}).lean().exec();
+        return this.recXml.listRecordsXml(recs);
     }
 }

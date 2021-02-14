@@ -3,7 +3,9 @@ export interface GenericI extends Document {
     readonly any?: any;
 }
 export interface NoticeI extends Document {
-    readonly any?: any;
+    readonly _id: any;
+    readonly date: any;
+    readonly metadonnees: any;
 }
 export interface MetaI extends Document {
     readonly any?: any;

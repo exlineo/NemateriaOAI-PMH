@@ -19,7 +19,6 @@ const identify_xml_1 = require("../../xml/identify-xml");
 const record_xml_1 = require("../../xml/record-xml");
 const set_xml_1 = require("../../xml/set-xml");
 const filtre_xml_1 = require("../../xml/filtre-xml");
-const id_i_interface_1 = require("../../../models/interfaces/id-i.interface");
 let PmhService = class PmhService {
     constructor(genModel, noticeModel, idModel, setModel, filtreModel, idXml, recXml, setXml, filtreXml) {
         this.genModel = genModel;
@@ -38,7 +37,6 @@ let PmhService = class PmhService {
     }
     async getIdIdentify(id) {
         let data = await this.idModel.findById(id).lean().exec();
-        console.log(data, this.idModel);
         return this.idXml.setIdentifyXml(data);
     }
     async getListIdentifiers() {
@@ -58,12 +56,20 @@ let PmhService = class PmhService {
         return this.setXml.setListSetsXml(sets);
     }
     async getRecords() {
-        let recs = await this.noticeModel.find().exec();
-        return this.recXml.setRecordsXml(recs);
+        let recs = await this.noticeModel.find().lean().exec();
+        return this.recXml.listRecordsXml(recs);
     }
     async getRecord(id) {
-        let rec = await this.genModel.findById(id).exec();
-        return this.recXml.setRecordXml(rec);
+        let rec = await this.noticeModel.findById(id).lean().exec();
+        return this.recXml.recordXml(rec);
+    }
+    async getRecordsMeta(p) {
+        let rec = await this.noticeModel.find({ prefix: p }).lean().exec();
+        return this.recXml.listRecordsXml(rec);
+    }
+    async getRecordsSet(set) {
+        let recs = await this.noticeModel.find({ 'metadonnees.nemateria.collection.nom_collection': set }).lean().exec();
+        return this.recXml.listRecordsXml(recs);
     }
 };
 PmhService = __decorate([

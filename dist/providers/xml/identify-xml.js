@@ -64,10 +64,12 @@ let IdentifyXml = class IdentifyXml {
     }
     setListIdentifyXml(ids) {
         let str = '';
-        if (Array.isArray(ids)) {
+        try {
             ids.forEach(i => str += this.idenfityXml(i));
+            return this.xml(str);
         }
-        return this.xml(str);
+        catch (e) {
+        }
     }
 };
 IdentifyXml = __decorate([

@@ -62,7 +62,6 @@ export class IdentifyXml {
     /**
      * Modèles XML pour les ID
      */
-    // setIdentifyXml(ID:any):string{
     setIdentifyXml(id:ID): string {
         return this.xml(this.idenfityXml(id));
     }
@@ -72,9 +71,14 @@ export class IdentifyXml {
      */
     setListIdentifyXml(ids: Array<any>):string {
         let str = '';
-        if (Array.isArray(ids)) {
+        // if (Array.isArray(ids)) {
+        //     ids.forEach(i => str += this.idenfityXml(i));
+        // }
+        try{
             ids.forEach(i => str += this.idenfityXml(i));
+            return this.xml(str);
+        }catch(e){
+
         }
-        return this.xml(str);
     }
 }

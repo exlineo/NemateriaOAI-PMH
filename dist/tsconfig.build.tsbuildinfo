@@ -1512,8 +1512,8 @@
         "affectsGlobalScope": false
       },
       "../src/models/interfaces/generic.interface.ts": {
-        "version": "8a1db615e8b279826e17d6055184005cc6b1ec463d2c422629d4581914edaff2",
-        "signature": "1789a72384c35da9ded1127eb81b2305c6c24065d2aab73b9bf95343b3001a28",
+        "version": "897465ec4b8f1c8a6ca1b366630a7d25c25d8d5e063010b7c5ba4a46630d930d",
+        "signature": "a55587272b4ca54484b7661873537b65abf0dfc86880c1222439aebdafe8b486",
         "affectsGlobalScope": false
       },
       "../src/config.ts": {
@@ -1527,13 +1527,13 @@
         "affectsGlobalScope": false
       },
       "../src/providers/xml/identify-xml.ts": {
-        "version": "0b60096998d01eb64dd5635915785821e962b0cd6a560b2ab3ef972cab383d92",
+        "version": "4862b1e01dfe148fcec2dfdaf61c66d7eba27e2f6e5ba43da7fb702b40d46812",
         "signature": "ec0c74718cffadeaefb6d4751af36768983a2a4ba9b9a021197f87f9629ae3d1",
         "affectsGlobalScope": false
       },
       "../src/providers/xml/record-xml.ts": {
-        "version": "988a75b7a3d20ffceea27a045782c88669db9ccd8ff613fad2080d7b0e6ef451",
-        "signature": "f2f6b750a95d7fa3abf93db9a68cca25926a5aa0e606baec87e538fe7a1e74eb",
+        "version": "fcade5b84a2fa19aab1837c8a55df5a28aa5b936b719057dbb5227fadc4de7e6",
+        "signature": "c3bcc1d969127a2169cce32c36d3147ded0e60db07c6db9b340f09a3f5be82d4",
         "affectsGlobalScope": false
       },
       "../src/models/interfaces/set.interface.ts": {
@@ -1552,8 +1552,8 @@
         "affectsGlobalScope": false
       },
       "../src/providers/services/pmh/pmh.service.ts": {
-        "version": "1a80fc0fd69e6934b4a228fbdcafebce7d01430c85807be469989b58f1749104",
-        "signature": "de14c1b18b364b3418ab57affeccf5b9656fb70d139de88c65c3714dfe4bea0c",
+        "version": "78ed2e9bb61e767b75582258f5df3809deaea746a8c0bab6ad389040dd5dd2a1",
+        "signature": "94be87c77fd8909c083bbbd3eea0d27b031b034914a6d6231a5bd485a0cafbf0",
         "affectsGlobalScope": false
       },
       "../src/identify/identify.controller.ts": {
@@ -1577,8 +1577,8 @@
         "affectsGlobalScope": false
       },
       "../src/list-records/list-records.controller.ts": {
-        "version": "d20780f5579a9d6e69a35e17258d700c83ae0d1841bfef84b629340fca737a25",
-        "signature": "2903c06d24db756325f229aea0c646d82e6a42695564a3e9ef4919c0a3000192",
+        "version": "8c831242537f5e27d543af3119da97a220b0379f0c45e5f04651659d456e00ae",
+        "signature": "422d1cbccf67e4775513b2c5de3e50b91249c14072faa4b3a4ea8daeb72cd497",
         "affectsGlobalScope": false
       },
       "../src/list-sets/list-sets.controller.ts": {
@@ -3406,7 +3406,8 @@
         "../src/providers/services/pmh/pmh.service.ts"
       ],
       "../src/list-records/list-records.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/providers/services/pmh/pmh.service.ts"
       ],
       "../src/list-sets/list-sets.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -4754,6 +4755,9 @@
         "../src/providers/xml.ts"
       ],
       "../src/list-metadata-formats/list-metadata-formats.controller.ts": [
+        "../src/providers/services/pmh/pmh.service.ts"
+      ],
+      "../src/list-records/list-records.controller.ts": [
         "../src/providers/services/pmh/pmh.service.ts"
       ],
       "../src/list-sets/list-sets.controller.ts": [
