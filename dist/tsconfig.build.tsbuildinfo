@@ -1552,13 +1552,13 @@
         "affectsGlobalScope": false
       },
       "../src/providers/services/pmh/pmh.service.ts": {
-        "version": "78ed2e9bb61e767b75582258f5df3809deaea746a8c0bab6ad389040dd5dd2a1",
-        "signature": "94be87c77fd8909c083bbbd3eea0d27b031b034914a6d6231a5bd485a0cafbf0",
+        "version": "e6e035a3f58ffc52c49a4cbc9f8174abb1468b8c9c12e9c60e3b2617924e8e15",
+        "signature": "ef024d37550877b64e8810db7691ecb9b18e1046cffedbd3e543934433a4e3ff",
         "affectsGlobalScope": false
       },
       "../src/identify/identify.controller.ts": {
-        "version": "259bd5c0f21f9fb6a498c552ce0fd70ad9b046aa7a5b9e2f32f832236e85d980",
-        "signature": "81d9be820e13dc612b682b9a20382277280fb31d1a3cdc3f5889e84be71b7e6f",
+        "version": "b060247b0ff9027d4ea3c50e190435ea4440fd5f3cb9f1c02418e338496c06fb",
+        "signature": "0b00473663d5ea25d3cf5218dbb6e415690f471250ae84021cf40f657174e1af",
         "affectsGlobalScope": false
       },
       "../src/providers/xml.ts": {
@@ -1567,18 +1567,18 @@
         "affectsGlobalScope": false
       },
       "../src/list-identifiers/list-identifiers.controller.ts": {
-        "version": "41e0bd2904afc49bddb0d1f62a7f67538b3bbf2d4cfb343af1ceb1ad3563e799",
+        "version": "78f169211f97d33bb5c91e8bf53a7d470aeb85d4730f5d26d685c689a508c3af",
         "signature": "916ed5ef2f53683a23ca51553367b1029c0447e073620eecae9c4f630d6f3c7e",
         "affectsGlobalScope": false
       },
       "../src/list-metadata-formats/list-metadata-formats.controller.ts": {
-        "version": "97fe0eb5fee12af8ba7fd2a1ba2047d3816acc32c42ea4d2bcc086090573b468",
-        "signature": "34dd074e05c1b3571af7c5e8bc4bba6cf1a35d0caca4a24b5a7f11ad7280a168",
+        "version": "4a22d9c2d0f345f1c7f452d8882e6e49965bfa4d3eb0a7fa45ceaf2e1ad974b2",
+        "signature": "2318ef046dd3f9e81129d62e9d8a88c13a46554501b2562700f90976ce3bef62",
         "affectsGlobalScope": false
       },
       "../src/list-records/list-records.controller.ts": {
-        "version": "8c831242537f5e27d543af3119da97a220b0379f0c45e5f04651659d456e00ae",
-        "signature": "422d1cbccf67e4775513b2c5de3e50b91249c14072faa4b3a4ea8daeb72cd497",
+        "version": "0d5ea9b11a5b2a0de05906414550ac088d3a131e38fae21f7c931f78d75c1efa",
+        "signature": "8d343c90b21073b4c64a144e74b547b04bf57e5c736d3fc4daec1f69170f5a51",
         "affectsGlobalScope": false
       },
       "../src/list-sets/list-sets.controller.ts": {
@@ -1597,7 +1597,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "bd175714468a837c6151e9ce923de51f377fff89c4f03321157e9838895cbd64",
+        "version": "8f5df31dbc44f5ecb421ab687c42d4205d6e6644ffdd5aa7ab56769a52875d5e",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -3367,7 +3367,6 @@
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
-        "../src/config.ts",
         "../src/get-record/get-record.controller.ts",
         "../src/identify/identify.controller.ts",
         "../src/list-identifiers/list-identifiers.controller.ts",
@@ -3397,7 +3396,6 @@
       ],
       "../src/list-identifiers/list-identifiers.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
         "../src/providers/services/pmh/pmh.service.ts",
         "../src/providers/xml.ts"
       ],
@@ -3441,6 +3439,7 @@
       "../src/providers/services/pmh/pmh.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/querystring.d.ts",
         "../src/models/interfaces/generic.interface.ts",
         "../src/models/interfaces/id-i.interface.ts",
         "../src/providers/xml/filtre-xml.ts",

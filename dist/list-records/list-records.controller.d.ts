@@ -5,9 +5,9 @@ export declare class ListRecordsController {
     listeNotices(): Promise<any>;
     parSet(set: any): Promise<any>;
     parMeta(prefix: any): Promise<any>;
-    parFrom(from: any): Promise<object>;
-    parFromUntil(from: any, until: any): Promise<object>;
-    parFromUntilMeta(from: any, until: any, metadataPrefix: any): Promise<object>;
+    parFrom(from: any): Promise<any>;
+    parFromUntil(from: any, until: any): Promise<any>;
+    parFromUntilMeta(from: any, until: any, meta: any): Promise<any>;
     parPresqueTout(from: any, until: any, metadataPrefix: any, set: any): Promise<object>;
     parTout(from: any, until: any, metadataPrefix: any, set: any, resumptionToken: any): Promise<object>;
 }

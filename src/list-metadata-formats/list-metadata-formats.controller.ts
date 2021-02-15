@@ -1,5 +1,5 @@
 import { Controller, Get, Param, Header } from '@nestjs/common';
-import { PmhService } from 'src/providers/services/pmh/pmh.service';
+import { PmhService } from '../providers/services/pmh/pmh.service';
 
 @Controller('ListMetadataFormats')
 export class ListMetadataFormatsController {

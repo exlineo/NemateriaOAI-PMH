@@ -30,14 +30,14 @@ let ListRecordsController = class ListRecordsController {
         return await this.pmhServ.getRecordsMeta(prefix);
     }
     async parFrom(from) {
-        return new Object();
+        return this.pmhServ.getRecordsFrom(from);
     }
     ;
     async parFromUntil(from, until) {
-        return new Object();
+        return this.pmhServ.getRecordsFromUntil(from, until);
     }
-    async parFromUntilMeta(from, until, metadataPrefix) {
-        return new Object();
+    async parFromUntilMeta(from, until, meta) {
+        return this.pmhServ.getRecordsFUM(from, until, meta);
     }
     async parPresqueTout(from, until, metadataPrefix, set) {
         return new Object();

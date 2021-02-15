@@ -71,6 +71,31 @@ let PmhService = class PmhService {
         let recs = await this.noticeModel.find({ 'metadonnees.nemateria.collection.nom_collection': set }).lean().exec();
         return this.recXml.listRecordsXml(recs);
     }
+    async getRecordsFrom(f) {
+        let recs = await this.noticeModel.find({ 'metadonnees.dublincore.date': { $gte: this.setTimeStamp(f) } }).lean().exec();
+        return this.recXml.listRecordsXml(recs);
+    }
+    async getRecordsFromUntil(f, u) {
+        let recs = await this.noticeModel.find({ 'metadonnees.dublincore.date': { $gte: this.setTimeStamp(f), $lt: this.setTimeStamp(u) } }).lean().exec();
+        return this.recXml.listRecordsXml(recs);
+    }
+    async getRecordsFUM(f, u, m) {
+        let recs = await this.noticeModel.find({ 'metadonnees.dublincore.date': { $gte: this.setTimeStamp(f), $lt: this.setTimeStamp(u) }, prefix: m }).lean().exec();
+        return this.recXml.listRecordsXml(recs);
+    }
+    async getRecordsAll(f, u, m, s) {
+        let recs = await this.noticeModel.find({ 'metadonnees.dublincore.date': { $gte: this.setTimeStamp(f), $lt: this.setTimeStamp(u) }, prefix: m, 'metadonnees.nemateria.collection.nom_collection': s }).lean().exec();
+        return this.recXml.listRecordsXml(recs);
+    }
+    setTimeStamp(d) {
+        if (isNaN(parseInt(d))) {
+            if (d.indexOf('-') > -1)
+                d = d.replace('-', '/');
+            return Date.parse(d);
+        }
+        ;
+        return parseInt(d);
+    }
 };
 PmhService = __decorate([
     common_1.Injectable(),

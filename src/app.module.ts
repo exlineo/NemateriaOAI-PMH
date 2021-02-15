@@ -15,7 +15,6 @@ import { AppService } from './app.service';
 import { PmhService } from './providers/services/pmh/pmh.service';
 import { dbProvide, genericProvider, idProvider, noticeProvider, filtreProvider, setProvider } from './providers/db';
 
-import { SERV_ADR } from './config';
 import { IdentifyXml } from './providers/xml/identify-xml';
 import { RecordXml } from './providers/xml/record-xml';
 import { SetXml } from './providers/xml/set-xml';

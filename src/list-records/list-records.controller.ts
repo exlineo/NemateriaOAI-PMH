@@ -13,7 +13,10 @@ export class ListRecordsController {
     async listeNotices(): Promise<any> {
         return this.pmhServ.getRecords();
     };
-
+    /**
+     * Rechercher les documents d'un SET
+     * @param set SET dont on cherche les enregistrements
+     */
     @Get('/set/:set')
     @Header('Content-Type', 'text/xml')
     async parSet(@Param('set') set): Promise<any>  {
@@ -34,8 +37,8 @@ export class ListRecordsController {
      */
     @Get('/from/:from')
     @Header('Content-Type', 'text/xml')
-    async parFrom(@Param('from') from): Promise<object>  {
-        return new Object();
+    async parFrom(@Param('from') from): Promise<any>  {
+        return this.pmhServ.getRecordsFrom(from);
     };
     /**
      * Rechercher dans un écart de dates
@@ -44,8 +47,8 @@ export class ListRecordsController {
      */
     @Get('/from/:from/until/:until')
     @Header('Content-Type', 'text/xml')
-    async parFromUntil(@Param('from') from, @Param('until') until): Promise<object>  {
-        return new Object();
+    async parFromUntil(@Param('from') from, @Param('until') until): Promise<any>  {
+        return this.pmhServ.getRecordsFromUntil(from, until);
     }
     
     /**
@@ -56,8 +59,8 @@ export class ListRecordsController {
      */
     @Get('/from/:from/until/:until/metadataPrefix/:metadataPrefix')
     @Header('Content-Type', 'text/xml')
-    async parFromUntilMeta(@Param('from') from, @Param('until') until, @Param('metadataPrefix') metadataPrefix): Promise<object>  {
-        return new Object();
+    async parFromUntilMeta(@Param('from') from, @Param('until') until, @Param('metadataPrefix') meta): Promise<any>  {
+        return this.pmhServ.getRecordsFUM(from, until, meta);
     }
     
     /**

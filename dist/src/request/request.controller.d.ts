@@ -1,6 +1,6 @@
 import { PmhService } from '../providers/services/pmh/pmh.service';
 export declare class RequestController {
-    private pms;
-    constructor(pms: PmhService);
+    private pmhServ;
+    constructor(pmhServ: PmhService);
     checkVerb(verb: any): Promise<string>;
 }

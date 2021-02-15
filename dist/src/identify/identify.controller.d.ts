@@ -1,6 +1,7 @@
-import { SetXml } from '../providers/xml';
+import { PmhService } from '../providers/services/pmh/pmh.service';
 export declare class IdentifyController {
-    private readonly xml;
-    constructor(xml: SetXml);
+    private readonly pmhServ;
+    constructor(pmhServ: PmhService);
     infosOAI(): Promise<string>;
+    infosIdOAI(id: any): Promise<string>;
 }

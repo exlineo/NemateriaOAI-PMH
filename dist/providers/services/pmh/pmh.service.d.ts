@@ -25,4 +25,9 @@ export declare class PmhService {
     getRecord(id: any): Promise<string>;
     getRecordsMeta(p: string): Promise<string>;
     getRecordsSet(set: string): Promise<string>;
+    getRecordsFrom(f: string): Promise<string>;
+    getRecordsFromUntil(f: string, u: string): Promise<string>;
+    getRecordsFUM(f: string, u: string, m: string): Promise<string>;
+    getRecordsAll(f: string, u: string, m: string, s: string): Promise<string>;
+    setTimeStamp(d: string): number;
 }

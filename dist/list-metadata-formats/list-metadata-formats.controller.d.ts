@@ -1,4 +1,4 @@
-import { PmhService } from 'src/providers/services/pmh/pmh.service';
+import { PmhService } from '../providers/services/pmh/pmh.service';
 export declare class ListMetadataFormatsController {
     private readonly pmhServ;
     constructor(pmhServ: PmhService);
